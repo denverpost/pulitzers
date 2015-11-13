@@ -43,10 +43,16 @@ $(document).foundation('reveal', {
 function revealCredits() {
     $('#credits').foundation('reveal', 'open');
 }
+
 function checkHash() {
     if (window.location.hash) {
+        revealSlides(galleries);
         var hash = window.location.hash;
-        scrollDownTo(hash);
+        if ($(hash).hasClass('hide')) {
+            toggleSidebar(hash,hash + 'link');
+        } else {
+            scrollDownTo(hash);
+        }
     }
 }
 
@@ -56,7 +62,16 @@ function scrollDownTo(whereToScroll, scrollOffset) {
         $('html,body').animate({
             scrollTop: ($(whereToScroll).offset().top - scrollOffset)
         }, 300);
+    } else {
+        var new_url = window.location.href.split('#')[0];
+        window.history.replaceState('', document.title, new_url);
     }
+}
+
+function toggleSidebar(toShow,toHide) {
+    $(toShow).removeClass('hide');
+    $(toHide).addClass('hide');
+    scrollDownTo(toShow);
 }
 
 function playerCreator(embedId, playerId, divId) {
