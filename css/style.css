@@ -149,10 +149,21 @@ div#name2 {
 }
 
 p {
-    font-size:1.3em;
+    font-size:1.35em;
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
+    font-weight: 300;
+    margin-bottom: 1.2em;
+    line-height: 1.65;
+    color: #666;
+}
+
+p em{
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-style: normal;
     font-weight: 400;
-    
+     color: #777;
 }
 p.lead {
     font-size:1.25em;
@@ -195,6 +206,10 @@ p.bylinebottom {
     height:0;
     clear:both;
 }
+
+
+
+
 section.inset a.hideme, section.inset a.expandme {
     text-transform: uppercase;
     font-size:.9em;
@@ -219,6 +234,54 @@ section.inset.left a.expandme:after {
     display:inline-block;
     padding:0 1em;
 }
+/* --------------------- Expanding/Collapsing Sidebar --------------------- */
+section.inset a.hideme, section.inset a.expandme {
+    text-align:right;
+    float:right;
+    text-transform: uppercase;
+    font-size:.9em;
+    text-decoration: none;
+    margin-top:.5em;
+    border-bottom:none;
+}
+/* up arrow */
+section.inset a.hideme:after {
+    content: "\25B2";
+    display:inline-block;
+    font-size:.8em;
+    padding:0 .5em;
+    margin-left:-1.9em;
+}
+section.inset.right a.expandme {
+    text-align:right;
+    float:right;
+}
+/* left arrow */
+section.inset.right a.expandme:before {
+    content: "\25C0";
+    display:inline-block;
+    font-size:.8em;
+    padding:0 .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .columns section.large-inset,
 .columns section.inset + .columns section.large-inset {
     margin:2em auto;
@@ -233,7 +296,7 @@ section.inset {
 section.inset.right {
     background:#f8f8f8;
     padding:0 2em 2em;
-    margin:.5em -15% .5em 1.5em;
+    margin:.5em -20% .5em 1.5em;
     width: 50%;
     font-size:.9em;
     line-height:1.4;
@@ -330,7 +393,11 @@ section.inset.right.chart h3.subheading {
 }
 
 
+section.inset img.mug{
+    width:70%;
+    margin:0 15% 1em;
 
+}
 
 /* grid related */
 /*[class*="block-grid-"] {
@@ -896,7 +963,7 @@ div.title h2 {
     text-align: center;
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
     font-weight:300;
-    font-size:2.8em;
+    font-size:3.2em;
     letter-spacing:0;
     line-height:1.15;
     color:#000;
@@ -919,7 +986,7 @@ h1, h2, h3, h4 {
    font-weight:700;
 }
 
-p, .reveal-modal li {
+.reveal-modal li {
   	color:#333;
     font-size:1.2em;
     line-height:2;

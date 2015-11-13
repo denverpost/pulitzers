@@ -394,7 +394,7 @@
 	</div>
 	<div class="photoright">
 		<!--<img src="http://placehold.it/1200x800&text=Right+Photo" alt="alt" />-->
-		<img src="./img/button-more.png" alt="tap icon" />
+		<a href="javascript:scrollDownTo('#2011-more',90);"><img src="./img/button-more.png" alt="tap icon" /></a>
 		<!--<p class="caption"><span class="captionhed">Caption hed</span> Lorem ipsum Sunt in deserunt minim in consequat reprehenderit veniam quis est cillum enim dolore ullamco adipisicing dolore dolore.</p>-->
 	<!--	<p class="tapit"><img src="./img/tap.svg" alt="tap icon" />
 		Tap above to read about Mike Keefe&rsquo;s win</p>-->
@@ -419,11 +419,64 @@
 		</div>
 	</div>
 		<div class="row">
-		<div class="large-6 large-centered medium-8 medium-centered small-11 small-centered columns">
+		<div class="large-6 large-centered medium-6 medium-centered small-11 small-centered columns">
 			<p>Just when he figured his window of opportunity had closed, longtime Denver Post editorial cartoonist Mike Keefe on Monday won the 2011 Pulitzer Prize for editorial cartooning.</p>
 			<p>Keefe won the prestigious honor for a portfolio of 20 editorial cartoons, which judges cited for their wide range and the way he used a &ldquo;loose, expressive style to send strong, witty messages.&rdquo;</p>
+			
+			<!-- ======================= EXPANDING/COLLAPSING SIDEBAR ======================= -->
+		<section class="large-6 medium-6 small-12 columns inset right" id="insetlink">
+			<h3 class="subheading">About Mike Keefe</h3>
+			<!--<p class="byline">Fania Davis</p>-->
+			<img src="./img/2011/keefe-mug.jpg" alt="Mike Keefe mugshoot" class="mug" />
+		
+            <p>Mike Keefe was the editorial cartoonist for <em>The Denver Post</em> from 1975-201X.&hellip;</p>
+			<p><a class="expandme" href="javascript:toggleSidebar('#inset','#insetlink');">Read more</a></p>
+		</section>
+
+		<section class="row inset large-inset hide" id="inset">
+			<div class="large-10 large-centered medium-11 medium-centered small-12 columns">
+				<h3 class="subheading">About Mike Keefe</h3>
+                <p class="byline"></p>
+				<p>Mike Keefe was the editorial cartoonist for <em>The Denver Post</em> from 1975-201X.</p>
+				<p>Throughout the nineties he was a weekly contributor to USA Today and a regular on America Online.</p> 
+				<p>Nationally syndicated by caglecartoons.com, his cartoons have appeared in <em>Time</em>, <em>Newsweek</em>, <em>Businessweek</em>, <em>US News and World Report</em>, <em>The New York Times</em>, <em>The Washington Post</em> and hundreds of newspapers across the country.</p>
+				<p>Keefe served as president of the Association of American Editorial Cartoonists and is a former John S. Knight Fellow at Stanford University. Among other honors, he&rsquo;s won the National Headliner&rsquo;s Award, Sigma Delta Chi Distinguished Service Award, The Best of the West Journalism Contest, the National Press Foundation Berryman Award and the Fischetti Cartoon Competition. He served as a Pulitzer Prize juror in 1997 and 98.</p>
+				<p>Keefe is the author of <em>Run Awry</em>, McGraw Hill; <em>Keefe-Kabob</em>, The Denver Post Corporation; and <em>The 10 Speed Commandments</em>, Doubleday. He was co-creator of the nationally-syndicated comic strips <em>Cooper</em> and <em>Iota</em>.</p>
+				<p>Keefe is a former US Marine and a college math teacher. He is married with two grown children and plays guitar regularly with Falling Rock, an oldies cover band.</p>
+				<p>His cartoons can be viewed online at <a href="">www.intoon.com</a></p>
+				<p><a class="hideme" href="javascript:toggleSidebar('#insetlink','#inset');">Collapse this story</a></p>
+			</div>
+		</section>	            
+ 		<!-- end sidebar --> 
+
+
+
+
 			<p>Keefe&rsquo;s cartoons appear Wednesday through Sunday on the editorial page. On Monday, he said he was stunned to receive journalism&rsquo;s highest honor.</p>
 			<p>&ldquo;I am gobsmacked,&rdquo; said Keefe, 64. &ldquo;In recent years, the Pulitzer has gone to much younger folks who are newer in the business. I&rsquo;ve always done pretty classical editorial cartooning. I thought my day had passed.&rdquo;</p>
+			<p>But William Dean Singleton, chairman and publisher of The Denver Post, called the recognition &ldquo;long overdue.&rdquo;</p>
+			<p>&ldquo;Mike&rsquo;s been here almost 36 years, and he&rsquo;s put out award-winning work almost since the day he got here,&rdquo; Singleton said. &ldquo;He&rsquo;s won every other major award in his field, so it&rsquo;s appropriate that he finally win the big one.&rdquo;</p>
+			<p>Keefe is the third Denver Post editorial cartoonist to win the honor, after Paul Conrad in 1964 and Pat Oliphant in 1967.</p>
+			<p>&ldquo;The two who preceded him were legends,&rdquo; Singleton said. &ldquo;I think Mike is now a legend too.&rdquo;</p>
+			<p>The other two finalists in the category were Matt Davies of The Journal News in Westchester County, N.Y., and Joel Pett of the Lexington Herald-Leader in Kentucky. Both have won previous Pulitzers.</p>
+			<p>Keefe said his style has evolved from &ldquo;analytic&rdquo; early days, when he dissected the work of his favorite cartoonists to figure out how they arrived at their takes on issues of the day. With time, that process became internalized.</p>
+			<p>&ldquo;It&rsquo;s rare to get one of those &lsquo;light bulb&rsquo; ideas,&rdquo; Keefe said. &ldquo;Mostly, it&rsquo;s a long process of selecting a topic, writing down what I believe about this issue and then looking for connections to other things that are happening in society that I could possibly use as a metaphor to make my point. Sometimes humor is the vehicle, sometime irony, sometimes drama. It&rsquo;s all over the place.&rdquo;</p>
+			<p>In addition to his single-panel editorial cartoons, Keefe and letters editor Cohen Peart do the weekly &ldquo;Name that &lsquo;Toon&rdquo; feature in the Sunday paper, in which readers contribute captions to Keefe&rsquo;s drawings.</p>
+			<p>Editorial page editor Dan Haley said it&rsquo;s that kind of interaction with the reading public that makes Keefe invaluable to the newspaper.</p>
+			<p>&ldquo;Mike gives people reason to open the newspaper, or fire up the computer or the iPad and look at The Denver Post,&rdquo; Haley said.</p>
+			<p>Haley also cited Keefe&rsquo;s ability to distill some of the most complex issues of our times to one panel and a few words. &ldquo;Mike gets four words and tells that story better than most of us do in 400,&rdquo; Haley said.</p>
+			<p>This year&rsquo;s award marks the seventh Pulitzer for The Denver Post.</p>
+			<p>&ldquo;Mike&rsquo;s a special, special talent,&rdquo; editor Gregory L. Moore said as employees gathered Monday evening in the Post lobby for a toast and celebration. &ldquo;I couldn&rsquo;t be happier for anyone. It&rsquo;s hard to win one of these. The thing that makes it special is that he was up against two previous winners. That shows what the top of the pyramid is like.&rdquo;</p>
+			<p>Moore, who serves on the Pulitzer jury, recuses himself from discussion in categories in which The Post is nominated.</p>
+			<p>Keefe joked that he&rsquo;s lucky to get paid for doing basically the same thing he did in third grade, when he doodled in the margins of his notebook and made fun of the teacher. Turning serious, he asked his colleagues to share in his award.</p>
+			<p>&ldquo;This is recognition of the whole paper,&rdquo; he said. &ldquo;I get support from the editorial page, the art department and reporters. I couldn&rsquo;t have done this without you guys.&rdquo;</p>
+			<p>Although he felt he had some strong entries in his portfolio, he had no inkling that this would be his year.</p>
+			<p>&ldquo;It&rsquo;s up and down, like being a baseball player — if you&rsquo;re hitting .300, you&rsquo;re doing well,&rdquo; Keefe said. &ldquo;I felt good about this year, but I didn&rsquo;t know if this would be a Pulitzer year. It caught me by surprise.&rdquo;</p>
+			<p>Keefe joined The Post in 1975, launching his second career. The first was as a math instructor at the University of Missouri-Kansas City, where he completed course work toward a doctorate and cartooned for the school newspaper, The University News. Keefe also served two years in the U.S. Marine Corps.</p>
+			<p></p>
+			<p>Singleton said Keefe&rsquo;s work underscores the importance of newspapers in generating the original content that eventually winds up on the Internet.</p>
+			<p>&ldquo;Mike&rsquo;s award certainly is symbolic of the hard work that our entire staff does every day,&rdquo; Singleton said. &ldquo;And it emphasizes once again that virtually all content starts with print newspapers.&rdquo;</p>
+
 		</div>
 	</div>
 
