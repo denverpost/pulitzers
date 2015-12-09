@@ -9,18 +9,32 @@
 .row-gallery--heading {
     position: relative;
 }
-.row-gallery h2 {
+
+.row-gallery a h3 {
     display:inline-block;
     font-family:'Strait',Helvetica,Arial,sans-serif !important;
     font-weight:400;
-    font-size:1.5em;
-    line-height:1;
+    font-size:1em;
+    /*line-height:1;*/
     text-transform:uppercase;
     letter-spacing:2px;
     margin:0;
     text-align: left;
-    color:#000;
+    color:#fff;
 }
+
+
+.row-gallery h2{
+  position:relative;
+  top:10px;
+  font-size: 3em;
+   color:#2ba6cb;
+   display: inline-block;
+   margin-right: .25em;
+   margin-left: 1%;
+   line-height: 1.25;
+}
+
 .row-gallery p {
     display:inline;
     font-family: Georgia, Times, 'Times New Roman', serif !important;
@@ -28,13 +42,14 @@
     font-size:1em;
     font-style: italic;
     line-height:1.65;
-    margin:0;
     text-align: left;
     color:#7e7e7e;
+
 }
 .row-gallery img {
     width:24px;
     height:24px;
+      margin-left: 1%;
 }
 .my-simple-gallery img {
     width: 100%;
@@ -174,6 +189,9 @@ img.img--with_border {
     width: 23%;
     line-height: 0;
 }
+.my-simple-gallery{
+  padding-top: 1em;
+}
 a.img-main1 {
     position:relative;
     width: 110%;
@@ -185,11 +203,11 @@ a.img-main1 {
 
 
 
-
+/*
 img.thumbed {
   display:none;
 }
-
+*/
 
 
 
@@ -307,6 +325,9 @@ a.my-simple-gallery__img--main2 {
 /** ---------------------------------------------- 480 ---------------------------------------------- **/
 @media only screen and (max-width: 480px) {
 
+  .row-gallery .slideshed {
+      padding-right: 2%;
+  }
   .row-gallery h2 {
       font-size:1.65em;
   }
