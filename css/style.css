@@ -1306,9 +1306,6 @@ a:hover, * a:hover, a:hover * {
 div.title h1 {
    font-size:3.5em;
   }
-div.title h4 {
- font-size:1.65em;
-   }
 }
 
 /* ------------------------------------------  860px ------------------------------------------  */
@@ -1325,6 +1322,10 @@ div.title h4 {
 div.title h1 {
    font-size:2.75em;
   }
+  .row-gallery h2{
+  font-size: 2em;
+}
+
 div.title h4 {
  font-size:1.5em;
    }
@@ -1373,7 +1374,9 @@ div.title h4 {
     font-size: 75%;
          }
 
-
+button, .button {
+    padding: .7em .8em;
+}
 
 }
 
@@ -2002,6 +2005,17 @@ div.title h4 {
     div#footer-bar {
         padding: .5em 1em .5em;
     }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++ 480px +++++++++++++++++++++++++++++++++ */
+
+@media only screen and (max-width:480px) {
+button, .button {
+    padding: .5em .6em;
+}
+
 }
 @media (max-width:360px) {
     div.title h2 {
