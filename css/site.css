@@ -337,6 +337,8 @@ a.my-simple-gallery__img--main2 {
 /** ---------------------------------------------- 480 ---------------------------------------------- **/
 @media only screen and (max-width: 480px) {
 
+
+
   .row-gallery .slideshed {
       padding-right: 2%;
   }
@@ -349,4 +351,20 @@ a.my-simple-gallery__img--main2 {
   .row-gallery p {
       font-size:1em;
   }
+  .my-simple-gallery a { 
+      margin: 1%;
+      width: 31%;
+  }
+}
+
+
+
+/** ---------------------------------------------- 360 ---------------------------------------------- **/
+@media only screen and (max-width: 360px) {
+.row-gallery p {
+    font-size: .9em;
+}
+.my-simple-gallery {
+    padding-top: .5em;
+}
 }

@@ -1757,8 +1757,9 @@ div#footer-bar ul.social li img{
 }
 
 
-
-@media (max-width:1240px) {
+/* ++++++++++++++++++++++++++++++++++++ 1240px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:1240px) {
+    
     .inset-video-right, section.inset .inset-video-right {
         margin-right:0;
         width:50%;
@@ -1775,59 +1776,29 @@ div#footer-bar ul.social li img{
     }
 }
 
-
-
-
 /* ++++++++++++++++++++++++++++++++++++ 1024px +++++++++++++++++++++++++++++++++ */
-
 @media only screen and (max-width:1024px) {
 
-.twinphoto.pulitzer-buttons .photoright {
-    padding:1.1em 2.25em 1.5em 2.5em;
+    .twinphoto.pulitzer-buttons .photoright {
+        padding:1.1em 2.25em 1.5em 2.5em;
+    }
 }
+/* ++++++++++++++++++++++++++++++++++++ 70em +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:70em) {
 
-
-
-@media (max-width:70em) {
-/*   section.inset.right {
-        padding:0 1.5em 1.5em;
-        margin-right:0;
-        width:50%;
-    }*/
     section.inset.left {
         padding:0 1.5em 1.5em;
         margin-left:0;
         width: 50%;
     }
 }
-@media (max-width:768px) and (orientation:portrait) {
-    .gridbox.expanded {
-        max-width:90%;
-    }
-    .gridbox.expanded .gridphotospace {
-        padding-bottom:120%;
-    }
-}
+
+/* ++++++++++++++++++++++++++++++++++++ 930px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:930px) {
- #logoimg {
+    
+    #logoimg {
         height:1.5em;
     }
-  /*  .top-bar-section ul li.social a {
-        padding:1em 40%;
-    }
-    .top-bar-section ul li.social {
-        display:inline-block;
-        float:left;
-        width:33.3%;
-    }
-    .top-bar-section ul li.social.firstsocial {
-        padding-left:0;
-    }*/
-  /*  div.title h2 {
-        font-size:4em;
-        margin-left:5%;
-        margin-right:5%;
-    }*/
     p, .reveal-modal li {
         color:#333;
         font-size:1.1em;
@@ -1847,8 +1818,14 @@ div#footer-bar ul.social li img{
         right:.2em;
         line-height:1;
     }
+    button, .button {
+        margin-bottom:1em;
+    }
 }
-@media (max-width:800px) {
+
+/* ++++++++++++++++++++++++++++++++++++ 800px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:800px) {
+    
     .centergallery .caption {
         font-size:.8em;
     }
@@ -1883,7 +1860,24 @@ div#footer-bar ul.social li img{
         font-size:2.5em;
     }
 }
-@media (max-width:640px) {
+
+/* ++++++++++++++++++++++++++++++++++++ 768px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:768px) and (orientation:portrait) {
+    
+    .gridbox.expanded {
+        max-width:90%;
+    }
+    .gridbox.expanded .gridphotospace {
+        padding-bottom:120%;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++++++++ 640px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:640px) {
+    
+    button, .button {
+        margin-bottom:.8em;
+    }
     .inset-video-right, section.inset .inset-video-right {
         padding-left:0;
         padding-right:0;
@@ -1932,7 +1926,9 @@ div#footer-bar ul.social li img{
         padding:0 .5em .25em;
     }
 }
-@media (max-width:540px) and (orientation:portrait) {
+
+/* ++++++++++++++++++++++++++++++++++++ 540px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:540px) and (orientation:portrait) {
     .gridbox.expanded {
         max-width:95%;
     }
@@ -1943,16 +1939,18 @@ div#footer-bar ul.social li img{
         line-height:1.5;
     }
 }
-@media (max-width:540px) {
+
+/* ++++++++++++++++++++++++++++++++++++ 540px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:540px) {
     div.title h2 {
         font-size:3em;
     }
     div.title h1 {
-   font-size:2.25em;
-  }
-div.title h4 {
- font-size:1.25em;
-   }
+        font-size:2.25em;
+    }
+    div.title h4 {
+        font-size:1.25em;
+    }
     .opener div#title h2 {
         font-size:3.5em;
     }
@@ -2012,12 +2010,16 @@ div.title h4 {
 /* ++++++++++++++++++++++++++++++++++++ 480px +++++++++++++++++++++++++++++++++ */
 
 @media only screen and (max-width:480px) {
-button, .button {
-    padding: .5em .6em;
-}
+    
+    button, .button {
+        padding: .5em .6em;
+    }
 
 }
-@media (max-width:360px) {
+/* ++++++++++++++++++++++++++++++++++++ 360px +++++++++++++++++++++++++++++++++ */
+
+@media only screen and(max-width:360px) {
+    
     div.title h2 {
         font-size:2.75em;
     }
@@ -2054,5 +2056,8 @@ button, .button {
     }
     div.title h3 {
         font-size:2em;
+    }
+    button, .button {
+        margin-bottom:.5em;
     }
 }
