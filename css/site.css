@@ -28,28 +28,28 @@
   position:relative;
   top:10px;
   font-size: 3em;
-   color:#2ba6cb;
+   color:#95273c;
    display: inline-block;
-   margin-right: .25em;
+   margin-right: .15em;
    margin-left: 1%;
    line-height: 1.25;
 }
 
 .row-gallery p {
-    display:inline;
-    font-family: Georgia, Times, 'Times New Roman', serif !important;
+   font-family: Georgia, Times, 'Times New Roman', serif !important;
     font-weight:400;
     font-size:1em;
     font-style: italic;
     line-height:1.65;
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;
     color:#7e7e7e;
 
 }
 .row-gallery img {
     width:24px;
     height:24px;
-      margin-left: 1%;
+    
 }
 .my-simple-gallery img {
     width: 100%;
@@ -276,6 +276,28 @@ a.my-simple-gallery__img--main2 {
       line-height: 1.1; 
   }
 }
+
+/* ++++++++++++++++++++++++++++++ 1024px ++++++++++++++++++++++++++++++ */
+@media screen and (max-width: 1024px) {
+   .row-gallery h2 {
+      font-size:2.5em;
+  }
+}
+/* ++++++++++++++++++++++++++++++ 768px ++++++++++++++++++++++++++++++ */
+@media screen and (max-width: 768px) {
+   .row-gallery--nav {
+      font-size: 18px;
+      line-height: 26px; 
+  }
+  .section--head p {
+      font-size: .9em;
+      line-height: 24px;
+  }
+   .row-gallery h2 {
+      font-size:2em;
+       top:6px;
+  }
+}
 /* ++++++++++++++++++++++++++++++ 650px ++++++++++++++++++++++++++++++ */
 @media screen and (max-width: 650px) {
   .block__ui-separated .col-50 {
@@ -290,6 +312,11 @@ a.my-simple-gallery__img--main2 {
    .row-gallery h2 {
       font-size:1.85em;
   }
+  .row-gallery p {
+      display:block;
+      font-size:.925em;
+      margin-bottom: 0;
+  }
   .row-gallery {
       padding: 0 18px;
   }
@@ -300,7 +327,36 @@ a.my-simple-gallery__img--main2 {
     #backitup {
       padding:0;
     }
+
 }
+
+
+
+/** ---------------------------------------------- 480 ---------------------------------------------- **/
+@media only screen and (max-width: 480px) {
+
+
+
+  .row-gallery .slideshed {
+      padding-right: 2%;
+  }
+   .row-gallery h2 {
+      font-size:1.65em;
+      top:2px;
+  
+  }
+ 
+  .row-gallery p {
+      font-size:.85em;
+  }
+  .my-simple-gallery a { 
+      margin: 1%;
+      width: 31%;
+  }
+}
+
+
+/** ---------------------------------------------- 450 ---------------------------------------------- **/
 
 @media screen and (max-width: 450px) {
   
@@ -320,54 +376,15 @@ a.my-simple-gallery__img--main2 {
       line-height: 26px; 
   }
 }
-
-@media screen and (max-width: 700px) {
-
-  .row-gallery--nav {
-      font-size: 18px;
-      line-height: 26px; 
-  }
-  .section--head p {
-      font-size: 18px;
-      line-height: 24px;
-  }
-  .row-gallery h2 {
-      font-size:2.25em;
-      top:6px;
-  }
-}
-
-/** ---------------------------------------------- 480 ---------------------------------------------- **/
-@media only screen and (max-width: 480px) {
-
-
-
-  .row-gallery .slideshed {
-      padding-right: 2%;
-  }
-   .row-gallery h2 {
-      font-size:1.65em;
-      top:2px;
-  
-  }
- 
-  .row-gallery p {
-      font-size:1em;
-  }
-  .my-simple-gallery a { 
-      margin: 1%;
-      width: 31%;
-  }
-}
-
-
-
 /** ---------------------------------------------- 360 ---------------------------------------------- **/
 @media only screen and (max-width: 360px) {
 .row-gallery p {
-    font-size: .9em;
+    font-size: .8em;
 }
 .my-simple-gallery {
     padding-top: .5em;
 }
+.my-simple-gallery a { 
+       width: 47%;
+  }
 }

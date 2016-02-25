@@ -206,15 +206,27 @@ p.bylinebottom {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 .teasers{
-    margin-top: 6em;
+    margin-top: 3em;
 }
 
 .teasers p{
     font-family:'Strait',Helvetica,Arial,sans-serif !important;
     text-align: center;
-    border-top:1px solid #c9c9c9;
-    font-size: 1em;
+    
+     border-top:1px solid #c9c9c9;
+    font-size: 1.65em;
     width:50%;
     margin: 0 auto;
     line-height: 1.15;
@@ -224,13 +236,36 @@ p.bylinebottom {
     color:  #95273c;
 
 }
+
+
+
+.teasers h5{
+font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
+   font-weight:700;
+
+text-align: center;
+   
+   font-size: 2em;
+   color:#95273c;
+   display: inline-block;
+   margin-right: .25em;
+   margin: 0 auto;
+   line-height: 1.25;
+   text-transform: none;
+   border-top: none;
+   border-bottom: none;
+   
+}
+
+
+
 .teasers p span{
     font-size: 125%
 }
 
 .teasers p:last-child{
     border-bottom: 1px solid #c9c9c9;
-   margin-bottom: 2em;
+   margin-bottom: 1em;
 
 }
 .teasers p a{
@@ -245,6 +280,46 @@ p.bylinebottom {
     border-bottom: none;
     font-size: .95em;
     margin-bottom: .5em;
+}
+
+.teasebar{
+    border-bottom: 1px solid #c9c9c9;
+    border-top: 1px solid #c9c9c9;
+    min-width: 100%;
+    margin-bottom: 2em;
+}
+
+.teasebar p{
+    font-family:'Strait',Helvetica,Arial,sans-serif !important;
+    margin: 0 auto;
+    line-height: 1.15;
+    padding: .5em 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:  #95273c;
+    font-size: 1em;
+}
+.teasebar p a{
+    border-bottom: none;
+
+}
+.teasebar p a:hover{
+    color: #95273c;
+
+}
+.teasebar .next{
+    text-align: right;
+
+}
+
+.teasebar .next p:after{
+    content: ' \25BC';
+    font-size: 75%;
+}
+
+.teasebar .previous p:before{
+    content: '\25B2';
+    font-size: 75%;
 }
 
 
@@ -385,7 +460,7 @@ section.inset div.title.lowertitle h1 {
 }
 section.inset h3.subheading {
     margin:1em auto;
-    font-size:2.05em;
+    font-size:1.7em;
     width:90%;
 }
 section.inset p, section.inset li, .reverse li {
@@ -886,13 +961,12 @@ section.inset img.mug{
     display:none;
 }
 .top-bar-section ul li.social img {
-    position:relative;
-     left:.75em;
-    
-    height:2em;
-    width:2em;
-   margin:0 auto .25em;
-    padding:0;
+    position: relative;
+    left: 0.75em;
+    height: 2em;
+    width: 2em;
+    margin: 0px auto 0.25em;
+    padding: 0px;
 }
 .top-bar .toggle-topbar.menu-icon a span {
     font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
@@ -962,12 +1036,42 @@ p.lead .has-tip {
 
 
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ DISPLAY TYPOGRAPHY +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+ h2{
+   font-size: 3em;
+   color:#2ba6cb;
+   display: inline-block;
+   margin-right: .25em;
+   margin-left: 1%;
+   line-height: 1.25;
+}
 
 
 
 
 
+h6{
+    font-family:'Strait',Helvetica,Arial,sans-serif!important;
+   text-transform: uppercase;
+}
+h6.button a,
+h6.button a:hover{
+    color: #fff;
+}
 
+
+
+.headandtease .button{
+margin-bottom: 0;
+    
+}
+.headandtease h6.button{
+   position:relative;
+   top:10px;
+   float: right;
+}
 
 
 
@@ -982,8 +1086,9 @@ div.title h3.subheading {
     margin-top:1em;
 }
 
-div.title h1 {
-    margin:1.5em 0;
+div.title h1,
+div.title h2 {
+    margin:1.5em 0 1.25em;
     text-align: left;
     font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
     font-weight:700;
@@ -1020,22 +1125,13 @@ div.title h4 {
 
 
 
-div.title h2 {
-    margin:0 0 1.5em;
-    text-align: center;
-    font-family:'Lato', Helvetica, Arial, sans-serif !important;
-    font-weight:300;
-    font-size:3.2em;
-    letter-spacing:0;
-    line-height:1.15;
-    color:#000;
-    z-index:-1;
-}
+
 div.title.more{
-    margin-top: 5em;
+    margin-top: 1em;
 }
-div.title.more h1 {
-    margin:0 0 1.5em;
+div.title.more h1,
+div.title.more h2 {
+    margin:0 0 .65em;
     text-align: center;
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
     font-weight:300;
@@ -1080,9 +1176,12 @@ a.button h3 {
     left: 0;
     top:45px;
     z-index: 100;
+    max-width: 100%
 }
 
-
+#backitup .button{
+    float: right;
+}
 
 .row-gallery h2.entry{
     color: #2ba6cb;
@@ -1115,13 +1214,6 @@ h1, h2, h3, h4 {
    font-weight:700;
 }
 
-.reveal-modal li {
-  	color:#333;
-    font-size:1.2em;
-    line-height:2;
-    margin-bottom:1.6em;
-    list-style:circle inside;
-}
 .photogrid ul {
     margin:0;
 }
@@ -1157,40 +1249,26 @@ h1, h2, h3, h4 {
     letter-spacing:1px;
     font-size:2em;
 }
-.infobox p, .infobox li     {
-    font-family:'PT Sans', Helvetica, Arial, sans-serif !important;
-    text-indent:0;
-    line-height:1.6;
-    margin-bottom:.4em;
-}
-.infobox ul {
-    margin-bottom:.25em;
-}
-.infobox h2 {
-    margin:0 0 .25em;
-}
-.reveal-modal .close-reveal-modal {
-    font-size:1.375em;
-    line-height:1;
-    position:absolute;
-    top:-0.7em;
-    right:-0.6em;
-    color:#eee;
-    font-weight:bold;
-    cursor:pointer;
-    -webkit-border-radius:.7em;
-    -moz-border-radius:.7em;
-    border-radius:.7em;
-    border:2px solid #eee;
-    width:1.4em;
-    height:1.4em;
-    padding:.05em 0 0 .2em;
-    background:#333;
-}
-.reveal-modal .close-reveal-modal:before {
-    content:"\2715";
-    text-decoration:none;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h3.subheading {
     font-family:'Noticia Text', Georgia, Times, serif;
     font-size:2.2em;
@@ -1203,11 +1281,26 @@ h3.subheading {
     border-bottom:1px solid rgba(0,0,0,.3);
 }
 p.small {
-    font-size:.7em;
-    line-height:1.6em;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    font-size:.75em;
+    line-height:1.25em;
     margin:0;
     font-weight:400;
+    font-style: italic;
 }
+
+p.small a{
+    margin-left: .5em;
+    font-family:'Strait',Helvetica,Arial,sans-serif!important;
+    font-weight:400;
+    text-transform: uppercase; 
+   font-style: normal;
+   font-size: 1.2em;
+   border-bottom: none;
+    
+}
+
+
 a, a *, * a, a:visited, a:visited *, * a:visited, a:active, a:active *, * a:active, a:focus, a:focus *, * a:focus {
     color:#c86d36);
     outline:none;
@@ -1348,117 +1441,6 @@ a:hover, * a:hover, a:hover * {
 }
 
 
-
-/* ------------------------------------------  1024px ------------------------------------------  */
-@media only screen and (max-width:1024px) {
-
-div.title h1 {
-   font-size:3.5em;
-  }
-}
-
-/* ------------------------------------------  860px ------------------------------------------  */
-@media only screen and (max-width:860px) {
-.row .blockit a li .gridphoto {
-    height: 40%;
-  
-}
-}
-
-/* ------------------------------------------  768px ------------------------------------------  */
-@media only screen and (max-width:768px) {
-  
-div.title h1 {
-   font-size:2.75em;
-  }
-  .row-gallery h2{
-  font-size: 2em;
-}
-
-div.title h4 {
- font-size:1.5em;
-   }
-
-
-  .row .blockit a li .gridphoto {
-    height: 45%;
-  
-} 
-.row .blockit li {
-   width:46%;
-    height: 380px;
-    margin:2%;
-
-}
-
-
-}
-/* ------------------------------------------  680px ------------------------------------------  */
-@media only screen and (max-width:680px) {
-   
-#prizes h1{
-  font-size:2.5em;
-  margin:1em 5% .3em;
-
-  margin:0 0 2%;
-   padding:1.5em;
-  
-}
-#prizes h1 span{
-  font-size:75%;
-  
-}
-.row .blockit a li h3 {
-   font-size: 1.1em;
-   margin:3% 10% 5%;
-    
-}
-
-
-.row .blockit a li h2 {
-    font-size: 1.2em;
-       }
-
-.row .blockit a li h2 span {
-    font-size: 75%;
-         }
-
-button, .button {
-    padding: .7em .8em;
-}
-
-}
-
-
-/* ------------------------------------------ 480px ------------------------------------------  */
-@media only screen and (max-width:480px) {
-.top-bar-section .shareit{
-    display:none;
-}
-#prizes h1{
-  font-size:2.15em;
-  margin:1em 5% 0;
-
-
-   margin:0 0 2%;
-   padding:1.15em;
-
-  
-}
-.row .blockit {
-   margin-top:1.5em;
-}
-
-.row .blockit li {
-     width:90%;
-   margin:5%;
-}
-
-
-
-
-
-}
 
 
 
@@ -1779,31 +1761,209 @@ a.startVideo:hover {
     font-size: 1.8em;
     font-weight:700;
 }
-div#footer-bar {
-    background:#fff;
+
+
+
+
+
+.infobox {
+    margin-top: 100px;
+    height: auto;
+}
+
+.infobox h3.subheading {
+    font-family: "Lato",Helvetica,Arial,sans-serif !important;
+    font-weight: 300;
+    font-size: 2.5em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0px auto 1em;
+    color: #84002B;
+    letter-spacing: 0.1em;
+}
+
+.infobox p, .infobox li     {
+   width: 100%;
+    font-family: "Strait",Helvetica,Arial,sans-serif !important;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-indent: 0px;
+    line-height: 1.35;
+    margin: .5em 0 0;
+    text-align: center;
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.infobox p a, .infobox li a     {
+  border-bottom: none;
+}
+.infobox p em, .infobox li em     {
+  display:block;
+  font-size: 85%;
+  font-family: Georgia, Times, 'Times New Roman', serif !important;
+  text-transform: none;
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+
+.infobox p.category, .infobox li.category {
+    width: 100%;
+    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
+   font-weight:700;
+   font-size: 1.25em;
+    text-indent: 0px;
+    line-height: 1.35;
+    margin: .5em 0 0;
+    letter-spacing: .02em;
+}
+
+
+
+.infobox ul {
+    margin-bottom:.25em;
+}
+.infobox h2 {
+    margin:0 0 .25em;
+}
+.reveal-modal {
+    width: 60%;
+    margin-left: -30%;
+}
+/*.reveal-modal .close-reveal-modal {
+    font-size:1.375em;
+    line-height:1;
+    position:absolute;
+    top:-0.7em;
+    right:-0.6em;
+    color:#eee;
+    font-weight:bold;
+    cursor:pointer;
+    -webkit-border-radius:.7em;
+    -moz-border-radius:.7em;
+    border-radius:.7em;
+    border:2px solid #eee;
+    width:1.4em;
+    height:1.4em;
+    padding:.05em 0 0 .2em;
+    background:#333;
+}*/
+
+.reveal-modal .close-reveal-modal {
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0.35em;
+    right: 0.35em;
+    width: 1em;
+    height: 1em;
+}
+
+
+.reveal-modal li {
+    color:#333;
+    font-size:1.2em;
+    line-height:1.75;
+    margin-bottom:1.6em;
+    list-style:inside none circle;
+}
+
+
+#credits .row .columns p {
+    text-indent: 0px;
+    margin-bottom: 0.05em;
+}
+#credits .row .columns p.category {
+    margin: 0.2em 0px;
+}
+#credits .row .columns p:first-child {
+    margin-top:1em;
+}
+
+
+
+
+
+
+
+
+
+
+div#footer-bar,
+div#footer-bar-fixed {
+    background:#000;
     -webkit-box-shadow:0px -2px 3px rgba(0, 0, 0, 0.15);
     -moz-box-shadow:0px -2px 3px rgba(0, 0, 0, 0.15);
     box-shadow:0px -2px 3px rgba(0, 0, 0, 0.15);
     color:#555;
-    padding:1em 1em 1.5em;
+    padding:1.25em 1em 0em;
 }
-div#footer-bar ul.social {
-    margin:0 auto;
+div#footer-bar ul.social,
+div#footer-bar-fixed ul.social {
+    float:right;
+    /*margin:0 auto;
     position:absolute;
-    left:45%;
+    left:45%;*/
     top:1em;
+    margin-bottom: 0;
 }
-div#footer-bar ul.social li {
-    padding:0 .5em;
+div#footer-bar ul.social li,
+div#footer-bar-fixed ul.social li {
+    padding:0 .25em;
     float:left;
     display:inline-block;
 }
 
-div#footer-bar ul.social li img{
+div#footer-bar ul.social li img,
+div#footer-bar-fixed ul.social li img {
     position:relative;
     width:2.15em;
-    top:-.3em;
+    top:-.55em;
 }
+div#footer-bar-fixed {
+    background-color:#000;
+    position:fixed;
+    bottom:0;
+}
+div#footer-bar p.small,
+div#footer-bar-fixed p.small{
+    color:#c9c9c9;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    font-style: italic;
+    font-size: .75em;
+    line-height: 1.25;
+    letter-spacing: 1px;
+   /* width:40%;*/
+ }
+ div#footer-bar p.small a,
+  div#footer-bar-fixed p.small a{
+    color:#c9c9c9;
+ }
+  div#footer-bar p.small a:hover,
+   div#footer-bar-fixed p.small a:hover{
+    color:#9ec4e8;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ++++++++++++++++++++++++++++++++++++ 1240px +++++++++++++++++++++++++++++++++ */
@@ -1825,8 +1985,32 @@ div#footer-bar ul.social li img{
     }
 }
 
+
+/* ++++++++++++++++++++++++++++++++++++ 1140px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:1140px) {
+div.title h1 {
+       font-size:4.5em;
+    }
+
+}
 /* ++++++++++++++++++++++++++++++++++++ 1024px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:1024px) {
+
+    
+    div.title h1 {
+       font-size:3.5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+.headandtease h6.button{
+    top:5px;
+}
+.button{
+    padding: .85em .95em;
+    font-size: .95em;
+}
 
     .twinphoto.pulitzer-buttons .photoright {
         padding:1.1em 2.25em 1.5em 2.5em;
@@ -1872,6 +2056,13 @@ div#footer-bar ul.social li img{
     }
 }
 
+/* ------------------------------------------  860px ------------------------------------------  */
+@media only screen and (max-width:860px) {
+    .row .blockit a li .gridphoto {
+        height: 40%;
+      
+    }
+}
 /* ++++++++++++++++++++++++++++++++++++ 800px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:800px) {
     
@@ -1908,6 +2099,18 @@ div#footer-bar ul.social li img{
     div.title h3 {
         font-size:2.5em;
     }
+    div.title.more {
+    margin-top: 2em;
+}
+div.title.more h1 {
+    margin: 0px 0px 1em;
+    font-size: 2.5em;
+}
+p.byline {
+    margin-bottom: 2.5em;
+}
+
+
 }
 
 /* ++++++++++++++++++++++++++++++++++++ 768px +++++++++++++++++++++++++++++++++ */
@@ -1919,11 +2122,84 @@ div#footer-bar ul.social li img{
     .gridbox.expanded .gridphotospace {
         padding-bottom:120%;
     }
+
+    div.title h1 {
+   font-size:2.75em;
+  }
+
+h2 {
+    font-size: 2em;
+  }
+
+
+
+  .row-gallery h2{
+  font-size: 2em;
 }
+
+div.title h4 {
+ font-size:1.5em;
+   }
+
+
+  .row .blockit a li .gridphoto {
+    height: 45%;
+  
+} 
+.row .blockit li {
+   width:46%;
+    height: 380px;
+    margin:2%;
+
+}
+
+
+}
+
+/* ------------------------------------------  680px ------------------------------------------  */
+@media only screen and (max-width:680px) {
+   
+#prizes h1{
+  font-size:2.5em;
+  margin:1em 5% .3em;
+
+  margin:0 0 2%;
+   padding:1.5em;
+  
+}
+#prizes h1 span{
+  font-size:75%;
+  
+}
+.row .blockit a li h3 {
+   font-size: 1.1em;
+   margin:3% 10% 5%;
+    
+}
+
+
+.row .blockit a li h2 {
+    font-size: 1.2em;
+       }
+
+.row .blockit a li h2 span {
+    font-size: 75%;
+         }
+
+button, .button {
+    padding: .7em .8em;
+}
+
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++ 640px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:640px) {
     
+    div.title h1 {
+        margin: 1.5em .15em 1.2em;
+    }
+
     button, .button {
         margin-bottom:.8em;
     }
@@ -1974,6 +2250,15 @@ div#footer-bar ul.social li img{
         font-size:7.25em;
         padding:0 .5em .25em;
     }
+    .reveal-modal {
+        width: 80%;
+        margin-left: 10%;
+        left: 0px;
+    }
+    section.inset.right {
+    margin: 0.5em 25% 1.5em;
+    width: 50%;
+}
 }
 
 /* ++++++++++++++++++++++++++++++++++++ 540px +++++++++++++++++++++++++++++++++ */
@@ -2040,18 +2325,25 @@ div#footer-bar ul.social li img{
         font-size:.85em;
         line-height:1.35;
     }
-    div#footer-bar p.small {
-        max-width:50%;
+    div#footer-bar p.small,
+    div#footer-bar-fixed p.small  {
+        max-width:43%;
         text-align:left;
     }
-    div#footer-bar ul.social {
+     div#footer-bar p.small a,
+     div#footer-bar-fixed p.small a {
+        position:relative;
+        top: 8px;
+    }   
+    div#footer-bar ul.social,
+    div#footer-bar-fixed ul.social  {
         right:1em;
         top:.6em;
         left:auto;
+        padding:.5em 0;
+
     }
-    div#footer-bar {
-        padding: .5em 1em .5em;
-    }
+
 }
 
 
@@ -2063,17 +2355,61 @@ div#footer-bar ul.social li img{
     button, .button {
         padding: .5em .6em;
     }
-
+   .top-bar-section .shareit{
+    display:none;
 }
-/* ++++++++++++++++++++++++++++++++++++ 360px +++++++++++++++++++++++++++++++++ */
+#prizes h1{
+  font-size:2.15em;
+  margin:1em 5% 0;
 
-@media only screen and(max-width:360px) {
-    
+
+   margin:0 0 2%;
+   padding:1.15em;
+
+  
+}
+.row .blockit {
+   margin-top:1.5em;
+}
+
+.row .blockit li {
+     width:90%;
+   margin:5%;
+}
+    .infobox {
+        margin-top:65px;
+        height: auto;
+    }
+    .infobox h3.subheading {
+        font-size: 1.65em;
+        margin: 0px auto 0;
+     }
+    .infobox p, .infobox li     {
+       font-size: .95em;
+    }
+    .infobox p.category, .infobox li.category {
+        width: 100%;
+        font-size: 1em;
+    }
+    .reveal-modal .close-reveal-modal {
+        width: .85em;
+        height: .85em;
+    }
+    div#footer-bar ul.social .goog,
+    div#footer-bar-fixed ul.social .goog {
+       display: none;
+    }
+    div#footer-bar ul.social, 
+    div#footer-bar-fixed ul.social {
+        margin-left:.5em;
+    }
+
     div.title h2 {
         font-size:2.75em;
     }
     div.title h1 {
         font-size:2em;
+        margin: 1em .15em .75em;
     }
     .opener div#title h2 {
         font-size:2.45em;
@@ -2098,10 +2434,12 @@ div#footer-bar ul.social li img{
         line-height:1.65;
     }
     section.inset p {
-        font-size: 1.05em;
+        font-size: 1em;
+        line-height: 1.5;
     }
     section.inset p.caption {
         font-size: 1em;
+
     }
     div.title h3 {
         font-size:2em;
@@ -2109,4 +2447,42 @@ div#footer-bar ul.social li img{
     button, .button {
         margin-bottom:.5em;
     }
+
+    .teasers {
+    margin-top:4em;
+}
+   .teasers p {
+   width:70%;
+  
+}
+.teasers p:last-child {
+    margin-bottom: 1em;
+}
+    div.title.more {
+    margin-top: 1.35em;
+}
+div.title.more h1 {
+    margin: 0px 0px 1em;
+    font-size: 1.75em;
+}
+p.byline {
+    margin-bottom: 1.5em;
+     font-size:.9em;
+}
+p{
+    line-height: 1.5;
+}
+
+}
+/* ++++++++++++++++++++++++++++++++++++ 400px +++++++++++++++++++++++++++++++++ */
+
+@media only screen and (max-width:400px) {
+section.inset.right {
+    margin: 0.5em 18% 1.5em;
+    width: 74%;
+}
+ div.title h1 {
+       margin: 1em .25em .75em;
+    }
+
 }
