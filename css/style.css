@@ -1491,6 +1491,11 @@ div.more-button {
     padding:0;
     width:100%;
 }
+.photorow.twinphoto{
+    margin:0 0 2em;
+    padding:0;
+    width:100%;
+}
 .twinphoto .photoleft {
     width:50%;
     float:left;
@@ -1530,13 +1535,13 @@ p.tapit  {
 
 }
 
-
+/*
 .twinphoto .photoleft .caption {
     padding-left:1em;
 }
 .twinphoto .photoright .caption {
     padding-right:1em;
-}
+}*/
 .centerphoto {
     width:100%;
     padding:0;
@@ -1800,7 +1805,7 @@ a.startVideo:hover {
 }
 .infobox p em, .infobox li em     {
   display:block;
-  font-size: 85%;
+  font-size: 80%;
   font-family: Georgia, Times, 'Times New Roman', serif !important;
   text-transform: none;
   font-style: italic;

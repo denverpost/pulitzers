@@ -8,7 +8,7 @@
 
 <title>The Denver Post&rsquo;s 2011 Pulitzer Prize - More to the Story</title>
 	
-<link rel="canonical" href="http://extras.denverpost.com/pulitzers/2011more.html" />
+<link rel="canonical" href="http://extras.denverpost.com/PULITZER/2011more.html" />
 
 	<meta name="distribution" content="global" />
 	<meta name="robots" content="index, nofollow" />
@@ -19,16 +19,16 @@
 	<meta name="dcterms.dateCopyrighted" content="2015" />
 	<meta name="copyright" content="The Denver Post" />
 
-<meta name="title" content="The Denver Post's 2011 Pulitzer Prize - More to the Story" />
+<meta name="title" content="The Denver Post&squo;s 2011 Pulitzer Prize - More to the Story" />
 <meta name="description" content="The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post&squo;s Mike Keefe." />
 <meta name="keywords" content="the denver post, denver, post, pulitzer, pulitzer prize, editorial cartooning, mike keefe, 2011, editorial cartoonist, winner" />
 <meta name="news_keywords" content="the denver post, denver, post, pulitzer, pulitzer prize, editorial cartooning, mike keefe, 2011, editorial cartoonist, winner" />
 
 	<meta name="twitter:card" value="summary" />
-<meta name="twitter:url" value="http://extras.denverpost.com/pulitzers/2011.html" />
-<meta name="twitter:title" value="The Denver Post's 2011 Pulitzer Prize - More to the Story" />
-<meta name="twitter:description" value="The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post's Mike Keefe." />
-<meta name="twitter:image" value="http://extras.denverpost.com/pulitzers/img/keefe-fb.jpg" />
+<meta name="twitter:url" value="http://extras.denverpost.com/PULITZER/2011.html" />
+<meta name="twitter:title" value="The Denver Post&squo;s 2011 Pulitzer Prize - More to the Story" />
+<meta name="twitter:description" value="The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post&squo;s Mike Keefe." />
+<meta name="twitter:image" value="http://extras.denverpost.com/PULITZER/img/trail001-fb.jpg" />
 	<meta name="twitter:site" value="@denverpost" />
 	<meta name="twitter:domain" value="denverpost.com" />
 <!--<meta name="twitter:creator" content="@dkrakel" />-->
@@ -40,12 +40,12 @@
 	<meta name="twitter:app:id:googleplay" value="com.ap.denverpost" />
 
 	<meta property="fb:app_id" content="105517551922"/>
-<meta property="og:title" content="The Denver Post's 2011 Pulitzer Prize - More to the Story" />
+<meta property="og:title" content="The Denver Post&squo;s 2011 Pulitzer Prize - More to the Story" />
 	<meta property="og:type" content="article" />
-<meta property="og:url" content="http://extras.denverpost.com/pulitzers/2011.html" />
-<meta property="og:image" content="http://extras.denverpost.com/pulitzers/img/keefe-fb.jpg" />
+<meta property="og:url" content="http://extras.denverpost.com/PULITZER/2011.html" />
+<meta property="og:image" content="http://extras.denverpost.com/PULITZER/img/trail001-fb.jpg" />
 	<meta property="og:site_name" content="The Denver Post" />
-<meta property="og:description" content="The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post's Mike Keefe." />
+<meta property="og:description" content="The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post&squo;s Mike Keefe." />
 	<meta property="article:publisher" content="https://www.facebook.com/denverpost" />
 
 
@@ -53,6 +53,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<!-- Styles CSS file -->
   	<link rel="stylesheet" href="./css/site.css">
+  	<link rel="stylesheet" href="./css/galleria.css">
 <!-- Core CSS file -->
 	<link rel="stylesheet" href="./css/photoswipe.css"> 
 <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
@@ -67,11 +68,66 @@
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="./js/jquery.unveil.js"></script>
 	<script type="text/javascript" src="./js/jquery.textfill.min.js"></script>
 	<script type="text/javascript" src="./js/vendor/modernizr.js"></script>
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <script type="text/javascript" src="//www.googletagservices.com/tag/js/gpt.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/galleria.js"></script>
+	<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.gallery').addClass('gallery_postcards'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_postcards').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script><!--[if lt IE 7]>
+<script defer type="text/javascript" src="js/pngfix.js"></script>
+<![endif]-->
 </head>
 <body>
 <!-- Google Tag Manager Data Layer -->
@@ -187,9 +243,9 @@
 				<li class="divider"></li>
 				<li class="top-top has-dropdown shareit"><a href="javascript:void(0);">Share</a>
 					<ul class="dropdown">
-						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('twitter','http://extras.denverpost.com/pulitzers/2011more.html','The Denver Post\'s 2011 Pulitzer Prize - More to the Story','','','denverpost','');"><img src="./img/twitter.png" alt="Tweet this" /></a></li>
-						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('facebook','http://extras.denverpost.com/pulitzers/2011more.html','The Denver Post\'s 2011 Pulitzer Prize - More to the Story','http://extras.denverpost.com/pulitzers/img/keefe-fb.jpg','The announcement of the 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post\'s Mike Keefe.');"><img src="./img/facebook.png" alt="Share on Facebook" /></a></li>
-						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('gplus','http://extras.denverpost.com/pulitzers/2011more.html');"><img src="./img/google.png" alt="Share on Google+" /></a></li>
+						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('twitter','http://dpo.st/longhaul2','The Denver Post&squo;s 2011 Pulitzer Prize - More to the Story','','','denverpost','');"><img src="./img/twitter.png" alt="Tweet this" /></a></li>
+						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('facebook','http://dpo.st/longhaul2','The Denver Post&squo;s 2011 Pulitzer Prize','http://extras.denverpost.com/long-haul/img/longhaul-fb.jpg','The 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post&squo;s Mike Keefe.');"><img src="./img/facebook.png" alt="Share on Facebook" /></a></li>
+						<li class="social"><a href="javascript:void(0);" onclick="revealSocial('gplus','http://dpo.st/longhaul2');"><img src="./img/google.png" alt="Share on Google+" /></a></li>
 					</ul>
 				</li>
               <!--  <li class="divider"></li>-->
@@ -219,9 +275,7 @@
 		<div class="large-8 large-centered medium-10 medium-centered small-11 small-centered columns">
 			
 
-		<div class="row-gallery" id="backitup">
-			<a href="2011.html" class="button"><h3>Back</h3></a>
-		</div>
+		
 		
 			<div class="teasers">
 					<!--<h3 class="subheading">More about the 2011 Pulitzer Prize for Editorial Cartooning</h3>-->
@@ -236,128 +290,30 @@
             	<em>April 19, 2011</em></p>
 			</div>
 		</div>
-	</div>
+
 		<div class="row">
-		<div class="large-6 large-centered medium-6 medium-centered small-11 small-centered columns">
-			<p>Just when he figured his window of opportunity had closed, longtime Denver Post editorial cartoonist Mike Keefe on Monday won the 2011 Pulitzer Prize for editorial cartooning.</p>
-			<p>Keefe won the prestigious honor for a portfolio of 20 editorial cartoons, which judges cited for their wide range and the way he used a &ldquo;loose, expressive style to send strong, witty messages.&rdquo;</p>
-			
-			<!-- ======================= EXPANDING/COLLAPSING SIDEBAR ======================= -->
-		<section class="large-6 medium-6 small-12 columns inset right" id="insetlink">
-			<h3 class="subheading">About Mike Keefe</h3>
-			<!--<p class="byline">Fania Davis</p>-->
-			<img src="./img/2011/keefe-mug.jpg" alt="Mike Keefe mugshoot" class="mug" />
+		<div class="large-12 medium-12 small-12 columns">
+	
 		
-            <p>Mike Keefe was the editorial cartoonist for <em>The Denver Post</em> from 1975-201X.&hellip;</p>
-			<p><a class="expandme" href="javascript:toggleSidebar('#inset','#insetlink');">Read more</a></p>
-		</section>
-
-		<section class="row inset large-inset hide" id="inset">
-			<div class="large-10 large-centered medium-11 medium-centered small-12 columns">
-				<h3 class="subheading">About Mike Keefe</h3>
-                <p class="byline"></p>
-				<p>Mike Keefe was the editorial cartoonist for <em>The Denver Post</em> from 1975-201X.</p>
-				<p>Throughout the nineties he was a weekly contributor to USA Today and a regular on America Online.</p> 
-				<p>Nationally syndicated by caglecartoons.com, his cartoons have appeared in <em>Time</em>, <em>Newsweek</em>, <em>Businessweek</em>, <em>US News and World Report</em>, <em>The New York Times</em>, <em>The Washington Post</em> and hundreds of newspapers across the country.</p>
-				<p>Keefe served as president of the Association of American Editorial Cartoonists and is a former John S. Knight Fellow at Stanford University. Among other honors, he&rsquo;s won the National Headliner&rsquo;s Award, Sigma Delta Chi Distinguished Service Award, The Best of the West Journalism Contest, the National Press Foundation Berryman Award and the Fischetti Cartoon Competition. He served as a Pulitzer Prize juror in 1997 and 98.</p>
-				<p>Keefe is the author of <em>Run Awry</em>, McGraw Hill; <em>Keefe-Kabob</em>, The Denver Post Corporation; and <em>The 10 Speed Commandments</em>, Doubleday. He was co-creator of the nationally-syndicated comic strips <em>Cooper</em> and <em>Iota</em>.</p>
-				<p>Keefe is a former US Marine and a college math teacher. He is married with two grown children and plays guitar regularly with Falling Rock, an oldies cover band.</p>
-				<p>His cartoons can be viewed online at <a href="http://www.intoon.com/">intoon.com</a></p>
-				<p><a class="hideme" href="javascript:toggleSidebar('#insetlink','#inset');">Return to story</a></p>
-			</div>
-		</section>	            
- 		<!-- end sidebar --> 
-
-
-
-
-			<p>Keefe&rsquo;s cartoons appear Wednesday through Sunday on the editorial page. On Monday, he said he was stunned to receive journalism&rsquo;s highest honor.</p>
-			<p>&ldquo;I am gobsmacked,&rdquo; said Keefe, 64. &ldquo;In recent years, the Pulitzer has gone to much younger folks who are newer in the business. I&rsquo;ve always done pretty classical editorial cartooning. I thought my day had passed.&rdquo;</p>
-			<p>But William Dean Singleton, chairman and publisher of The Denver Post, called the recognition &ldquo;long overdue.&rdquo;</p>
-			<p>&ldquo;Mike&rsquo;s been here almost 36 years, and he&rsquo;s put out award-winning work almost since the day he got here,&rdquo; Singleton said. &ldquo;He&rsquo;s won every other major award in his field, so it&rsquo;s appropriate that he finally win the big one.&rdquo;</p>
-
-		</div>
 	</div>
-			 <!-- ======================= PHOTO ======================= -->       
-	<div class="row">
-		<div class="large-8 large-centered medium-10 medium-centered  small-11 small-centered columns">
-			<div class="centerphoto3">
-				<img src="./img/2011/keefe-001.jpg" alt="alt" />
-				<p class="caption">Mike Keefe in 1978. <span class="photog">Denver Post file photo</span></p>
-			</div>
-		</div>
-    </div>
-    <!-- end photo-->
-    <div class="row">
-		<div class="large-6 large-centered medium-6 medium-centered small-11 small-centered columns">		
-			<p>Keefe is the third Denver Post editorial cartoonist to win the honor, after Paul Conrad in 1964 and Pat Oliphant in 1967.</p>
-			<p>&ldquo;The two who preceded him were legends,&rdquo; Singleton said. &ldquo;I think Mike is now a legend too.&rdquo;</p>
-			<p>The other two finalists in the category were Matt Davies of The Journal News in Westchester County, N.Y., and Joel Pett of the Lexington Herald-Leader in Kentucky. Both have won previous Pulitzers.</p>
-			<p>Keefe said his style has evolved from &ldquo;analytic&rdquo; early days, when he dissected the work of his favorite cartoonists to figure out how they arrived at their takes on issues of the day. With time, that process became internalized.</p>
-			<p>&ldquo;It&rsquo;s rare to get one of those &lsquo;light bulb&rsquo; ideas,&rdquo; Keefe said. &ldquo;Mostly, it&rsquo;s a long process of selecting a topic, writing down what I believe about this issue and then looking for connections to other things that are happening in society that I could possibly use as a metaphor to make my point. Sometimes humor is the vehicle, sometime irony, sometimes drama. It&rsquo;s all over the place.&rdquo;</p>
-			<p>In addition to his single-panel editorial cartoons, Keefe and letters editor Cohen Peart do the weekly &ldquo;Name that &lsquo;Toon&rdquo; feature in the Sunday paper, in which readers contribute captions to Keefe&rsquo;s drawings.</p>
+</div>
 
-		</div>
-	</div>
-			 <!-- ======================= PHOTO ======================= -->       
-	<div class="row">
-		<div class="large-8 large-centered medium-10 medium-centered  small-11 small-centered columns">
-			<div class="centerphoto3">
-				<img src="./img/2011/keefe-002.jpg" alt="alt" />
-				<p class="caption">Denver Post Editorial cartoonist Mike Keefe recieves congratulations from Denver Post Editorial page editor, Dan Haley after the announcement that Keefe had won the 2011 Pullitzer Prize for editoral cartoons. <span class="photog">Photo by Kathryn Scott Osler, Denver Post file</span></p>
-			</div>
-		</div>
-    </div>
-    <!-- end photo-->
-    <div class="row">
-		<div class="large-6 large-centered medium-6 medium-centered small-11 small-centered columns">		
 
-			<p>Editorial page editor Dan Haley said it&rsquo;s that kind of interaction with the reading public that makes Keefe invaluable to the newspaper.</p>
-			<p>&ldquo;Mike gives people reason to open the newspaper, or fire up the computer or the iPad and look at The Denver Post,&rdquo; Haley said.</p>
-			<p>Haley also cited Keefe&rsquo;s ability to distill some of the most complex issues of our times to one panel and a few words. &ldquo;Mike gets four words and tells that story better than most of us do in 400,&rdquo; Haley said.</p>
-			<p>This year&rsquo;s award marks the seventh Pulitzer for The Denver Post.</p>
-			<p>&ldquo;Mike&rsquo;s a special, special talent,&rdquo; editor Gregory L. Moore said as employees gathered Monday evening in the Post lobby for a toast and celebration. &ldquo;I couldn&rsquo;t be happier for anyone. It&rsquo;s hard to win one of these. The thing that makes it special is that he was up against two previous winners. That shows what the top of the pyramid is like.&rdquo;</p>
-			<p>Moore, who serves on the Pulitzer jury, recuses himself from discussion in categories in which The Post is nominated.</p>
-			<p>Keefe joked that he&rsquo;s lucky to get paid for doing basically the same thing he did in third grade, when he doodled in the margins of his notebook and made fun of the teacher. Turning serious, he asked his colleagues to share in his award.</p>
-
-		</div>
-	</div>
-			 <!-- ======================= PHOTO ======================= -->       
-	<div class="row">
-		<div class="large-8 large-centered medium-10 medium-centered  small-11 small-centered columns">
-			<div class="centerphoto3">
-				<img src="./img/2011/keefe-003.jpg" alt="alt" />
-				<p class="caption">William Dean Singleton, Chairman & Publisher, left, and Gregory L. Moore, Editor, center, congratulate Mike Keefe in the newsroom for winning the 2011 Pulitzer Prize for a distinguished cartoon or portfolio of cartoons. <span class="photog">Photo by Kathryn Scott Osler, Denver Post file</span></p>
-			</div>
-		</div>
-    </div>
-    <!-- end photo-->
-    <div class="row">
-		<div class="large-6 large-centered medium-6 medium-centered small-11 small-centered columns">		
-
-			<p>&ldquo;This is recognition of the whole paper,&rdquo; he said. &ldquo;I get support from the editorial page, the art department and reporters. I couldn&rsquo;t have done this without you guys.&rdquo;</p>
-			<p>Although he felt he had some strong entries in his portfolio, he had no inkling that this would be his year.</p>
-			<p>&ldquo;It&rsquo;s up and down, like being a baseball player — if you&rsquo;re hitting .300, you&rsquo;re doing well,&rdquo; Keefe said. &ldquo;I felt good about this year, but I didn&rsquo;t know if this would be a Pulitzer year. It caught me by surprise.&rdquo;</p>
-			<p>Keefe joined The Post in 1975, launching his second career. The first was as a math instructor at the University of Missouri-Kansas City, where he completed course work toward a doctorate and cartooned for the school newspaper, The University News. Keefe also served two years in the U.S. Marine Corps.</p>
-			<p></p>
-			<p>Singleton said Keefe&rsquo;s work underscores the importance of newspapers in generating the original content that eventually winds up on the Internet.</p>
-			<p>&ldquo;Mike&rsquo;s award certainly is symbolic of the hard work that our entire staff does every day,&rdquo; Singleton said. &ldquo;And it emphasizes once again that virtually all content starts with print newspapers.&rdquo;</p>
-
-		</div>
-	</div>
 
 </section>
-
-		 <!-- ======================= PHOTO ======================= -->       
-	<div class="row">
-		<div class="large-7 large-centered medium-7 medium-centered small-12 columns">
-			<div class="centerphoto3 bottom">
-				<img src="./img/2011/keefe-cert.jpg" alt="alt" />
-				<!--<p class="caption">William Dean Singleton, Chairman & Publisher, left, and Gregory L. Moore, Editor, center, congratulate Mike Keefe in the newsroom for winning the 2011 Pulitzer Prize for a distinguished cartoon or portfolio of cartoons. <span class="photog">Photo by Kathryn Scott Osler, Denver Post file</span></p>-->
-			</div>
+<div class="row">
+		<div class="large-8 large-centered medium-10 medium-centered small-11 small-centered columns">
+			<div class="cards">
+				<div id="main_image"></div>
+					<ul class="gallery">
+			    		<li class="active"><img src="./img/2012/craig-006.jpg" alt="Join the Denver Post round-up" title="Jeff Neumann, The Denver Post" /></li>
+			    		<li><img src="./img/2012/craig-001.jpg" alt="A Post Gang welcome" title="Jeff Neumann, The Denver Post" /></li>
+			   			
+					</ul>
+						<p class="slidenav"><a href="#" onclick="$.galleria.prev(); return false;"> previous</a> | <a href="#" onclick="$.galleria.next(); return false;">next </a></p>
+			</div>	
 		</div>
-    </div>
-    <!-- end photo-->
+</div>
 <!--
 
 
@@ -393,10 +349,10 @@
 -->
 <div class="small-12 columns" id="footer-bar">
 	<p class="small" style="float:left;">Copyright <span style="top:.18em;position:relative;font-size:1.1em;">&copy;</span> 2015, The Denver Post</p>
-	<p class="small" style="float:right;"><a href="javascript:void(0);" data-reveal-id="credits">Credits</a></p><ul class="social">
-		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('twitter','http://extras.denverpost.com/pulitzers/2011more.html','The Denver Post\'s 2011 Pulitzer Prize - More to the Story','','','denverpost','');"><img src="./img/twitter.png" alt="Tweet this" /></a></li>
-		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('facebook','http://extras.denverpost.com/pulitzers/2011more.html','The Denver Post\'s 2011 Pulitzer Prize - More to the Story','http://extras.denverpost.com/pulitzers/img/keefe-fb.jpg','The announcement of the 2011 Pulitzer Prize for Editorial Cartooning, won by The Denver Post\'s Mike Keefe.');"><img src="./img/facebook.png" alt="Share on Facebook" /></a></li>
-		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('gplus','http://extras.denverpost.com/pulitzers/2011more.html');"><img src="./img/google.png" alt="Share on Google+" /></a></li>
+	<ul class="social">
+		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('twitter','http://dpo.st/longhaul2','The Long Haul: Planning a trek along The Colorado Trail — The Denver Post','','','denverpost','');"><img src="./img/twitter.png" alt="Tweet this" /></a></li>
+		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('facebook','http://dpo.st/longhaul2','The Long Haul: Planning a trek along The Colorado Trail — The Denver Post','http://extras.denverpost.com/long-haul/img/longhaul-fb.jpg','Denver Post photo editor Dean Krakel plans to spend part of 2015 hiking The Colorado Trail. But he spent more than six months planning for the trek.');"><img src="./img/facebook.png" alt="Share on Facebook" /></a></li>
+		<li class="social"><a href="javascript:void(0);" onclick="revealSocial('gplus','http://dpo.st/longhaul2');"><img src="./img/google.png" alt="Share on Google+" /></a></li>
 	</ul>
 	<div class="clear"></div>
 </div>
@@ -407,20 +363,28 @@
 		<div id="credits" class="reveal-modal credits-modal infobox" data-reveal>
 			<div class="row">
 				<div class="large-12 columns">
-					<h3 class="subheading">Credits</h3>
-            		<div class="large-6 columns">
-                    	<p class="category">Content</p>
-                    	<p><a href="mailto:ksimpson@denverpost.com?subject=Denver Post Pulitzers">Kevin Simpson</a> <em>Writer</em></p>
-						<p><a href="mailto:kosler@denverpost.com@denverpost.com?subject=Denver Post Pulitzers">Kathryn Scott Osler</a> <em>Photographer</em></p>
-						<p><a href="mailto:dpetty@denverpost.com?subject=Denver Post Pulitzers">Dan Petty</a> <em>Project Editor</em></p>
-						<p><a href="mailto:mlyden@denverpost.com?subject=Denver Post Pulitzers">Meghan Lyden</a> <em>Photo/Video Director</em></p>
-            			<p><a href="mailto:vmakings@denverpost.com?subject=Denver Post Pulitzers">Vickie Makings</a> <em>Librarian, Research</em></p>
+					<h3 class="subheading">The Crew</h3>
+            		<div class="large-4 columns">
+                    	<p class="category">The Story</p>
+                    	<p><a href="mailto:dkrakel@denverpost.com?subject=Colorado Trail project">Dean Krakel</a>, <em>Writer</em></p>
+						<p><a href="mailto:jfields@denverpost.com?subject=Colorado Trail project">Jenn Fields</a>, <em>Editor</em></p>
+            		</div>
+                  
+                  	<div class="large-4 columns"> 
+                   		<p class="category">Photography &amp; Video</p>
+                    	<p><a href="mailto:blewis@denverpost.com?subject=Colorado Trail project">Dean Krakel</a>, <em>Photographer, Photo Editor</em></p>
+						<!--<p><a href="mailto:mgaylord@denverpost.com?subject=Colorado Trail project">Mahala Gaylord</a>, <em>Splash Page Photograph</em></p>
+						<p><a href="mailto:blewis@denverpost.com?subject=Colorado Trail project">Dean Krakel</a>, <em>Photographer, Videographer</em></p>
+						<p><a href="mailto:ptraylor@denverpost.com?subject=Colorado Trail project">Patrick Traylor</a>, <em>Photo Editor</em></p>
+						<p><a href="mailto:dkrakel@denverpost.com?subject=Colorado Trail project">Dean Krakel</a>, <em>Photo Editor</em></p>
+						<p><a href="mailto:abrothers@denverpost.com?subject=Colorado Trail project">Amy Brothers</a>, <em>Video Editor</em></p>-->
                     </div>
             		
-                    <div class="large-6 columns">
+                    <div class="large-4 columns">
                     	<p class="category">Design &amp; Development</p>
-                    	<p><a href="jneumann@denverpost.com?subject=Denver Post Pulitzers">Jeff Neumann</a> <em>Lead Designer, Developer</em></p>
-                    	<p><a href="dschneider@denverpost.com?subject=Denver Post Pulitzers">Daniel J. Schneider</a>, <em>Lead Developer, Web Designer</em></p>
+                    	<p><a href="jneumann@denverpost.com?subject=Colorado Trail project">Jeff Neumann</a>, <em>Lead Designer, Developer</em></p>
+                    	<p><a href="dschneider@denverpost.com?subject=Colorado Trail project">Daniel J. Schneider</a>, <em>Lead Developer, Web Designer</em></p>
+                    	<p>Damon Cain, <em>Director of Visuals</em></p>
                     </div>
 				</div>        
 			</div>
