@@ -55,8 +55,8 @@ function revealSlides(galleries) {
                 centerMode: true,
                 centerPadding: '15%',
                 slidesToShow: 1,
-                prevArrow: '<button type="button" class="slick-prev"><span>&lt;</span></button>',
-                nextArrow: '<button type="button" class="slick-next"><span>&gt;</span></button>',
+                prevArrow: '<button type="button" class="slick-prev"><span>&lsaquo;</span></button>',
+                nextArrow: '<button type="button" class="slick-next"><span>&rsaquo;</span></button>',
                 responsive: [{
                     breakpoint: 800,
                     settings: {

@@ -156,11 +156,9 @@ p {
     font-size:1.2em;
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
     font-weight: 300;
-<<<<<<< HEAD
-    margin-bottom: .85em;
-=======
+
     margin: 0 0 1.2em;
->>>>>>> ea4030ba011bf12e1b50a40d036612af9f8a9073
+
     line-height: 1.65;
     color: #666;
 }
@@ -1577,7 +1575,6 @@ p.tapit  {
   	font-size:1em;
     line-height:1.5;
     color:rgba(0,0,0,0.8);
-    padding:.75em 0 0;
     margin:0;
     text-indent: 0;
     font-family:'Lato', Helvetica, Arial, sans-serif;
@@ -1585,6 +1582,8 @@ p.tapit  {
     font-style:normal;
     cursor:default; 
     text-indent:0;
+    background-color: #e8e8e8;
+    padding:1.75em 2em;
 }
 .caption span.captionhed {
     text-transform:uppercase;
@@ -1620,16 +1619,18 @@ p.tapit  {
 .centergallery .columns {
     padding:0 1.5em;
 }
-.centergallery img {
+/*.centergallery img {
     margin:0 auto .5em;
-}
+}*/
 .centergallery button span {
     font-family:Times, Georgia, serif !important;
-    font-size:2em;
-    margin:0 1em;
+    font-size:5em;
+    margin:0;
     display:block;
     color:rgba(153,153,153,0.8);
     text-shadow:0px 0px 2px rgba(80,80,80,.5);
+     text-align:center;
+   
 
 }
 .centergallery .slick-list {
@@ -1641,9 +1642,12 @@ p.tapit  {
     right:0;
     height:100%;
     width:15%;
-    text-align:left;
     background:rgba(255,255,255,1.0);
     outline:none;
+}
+.centergallery button.slick-next span{
+   margin:-1em 0 0 -1.5em;
+ 
 }
 .centergallery button.slick-prev {
     position:absolute;
@@ -1651,9 +1655,11 @@ p.tapit  {
     left:0;
     height:100%;
     width:15%;
-    text-align:right;
     background:rgba(255,255,255,1.0);
     outline:none;
+}
+.centergallery button.slick-prev span {
+     margin:-1em -1.35em 0 0;
 }
 
 /*
