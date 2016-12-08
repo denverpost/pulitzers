@@ -429,7 +429,7 @@ section.inset h4 {
    text-align:center;
    text-transform: uppercase;
    font-size: 1.2em;
-   margin-bottom: 1em;
+   margin: 2em 0 1.5em;
    color: #ba5847;
  }
 
@@ -2363,8 +2363,10 @@ Vertical navigation
 .cd-vertical-nav.open ul .label {
     background-color: transparent;
     font-size: 1.35em;
-   font-family:'Lato', Helvetica, Arial, sans-serif !important;
-    font-weight: 300;
+    font-family:'Strait',Helvetica,Arial,sans-serif !important;
+   font-size:1em;
+  text-transform: uppercase;
+  font-weight: 400;
     padding:0;
    
   
