@@ -190,7 +190,7 @@ p.blurb {
     font-weight:400;
 }
 p.byline {
-    font-family:'Merriweather', Georgia, Times, 'Times New Roman', serif !important;
+    font-family:Georgia, Times, 'Times New Roman', serif !important;
     font-weight: 300;
     font-style: italic;
    text-align:center;
@@ -376,7 +376,8 @@ section.inset.left a.expandme:after {
 }
 /* --------------------- Expanding/Collapsing Sidebar --------------------- */
 section.inset a.hideme, section.inset a.expandme {
-    text-align:right;
+     font-family:'Strait',Helvetica,Arial,sans-serif !important;
+   text-align:right;
     float:right;
     text-transform: uppercase;
     font-size:.9em;
@@ -437,7 +438,7 @@ section.inset h4 {
 
 section.storyHeds.inset a.hideme, section.inset a.expandme {
    display:inline-block; 
-   font-family:'Lato', Helvetica, Arial, sans-serif !important;
+   font-family:'Strait', Helvetica, Arial, sans-serif !important;
   font-weight: 300;
    text-align:right;
     float:right;
@@ -551,7 +552,7 @@ section.inset p, section.inset li, .reverse li {
 
 section.inset p.bylinebottom {
    display: block;
-    font-family:'Merriweather', Georgia, Times, 'Times New Roman', serif !important;
+    font-family:Georgia, Times, 'Times New Roman', serif !important;
     font-weight: 300;
     font-style: italic;
 text-align:center;
@@ -1318,8 +1319,8 @@ div.title h3 {
     z-index:-1;
 }
 h1, h2, h3, h4 {
-  	font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-   font-weight:700;
+ /* 	font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
+   font-weight:700;*/
 }
 
 .photogrid ul {
@@ -1379,8 +1380,8 @@ h1, h2, h3, h4 {
 
 h3.subheading {
     font-family:'Noticia Text', Georgia, Times, serif;
-    font-size:2.2em;
-    font-weight:700;
+    font-family:'Lato', Helvetica, Arial, sans-serif !important;font-size:2.2em;
+    font-weight:900;
     display:block;
     text-align:center;
     margin:3.5em auto 1.5em;
@@ -1534,7 +1535,7 @@ a:hover, * a:hover, a:hover * {
 .row .blockit a li h2 span {
      display:block;
      font-family: Georgia, Times, 'Times New Roman', serif !important;
-   font-family:'Merriweather', Georgia, Times, 'Times New Roman', serif !important;
+   font-family:Georgia, Times, 'Times New Roman', serif !important;
      font-weight: 300;
     font-style: italic;
     font-size: 65%;
