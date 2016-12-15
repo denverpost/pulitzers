@@ -9,11 +9,11 @@ jQuery(document).ready(function($){
 	$(window).on('scroll', checkScroll);
 
 	//smooth scroll to the selected section
-	verticalNavigation.on('click', 'a', function(event){
-        event.preventDefault();
-        smoothScroll($(this.hash));
-        verticalNavigation.removeClass('open');
-    });
+//	verticalNavigation.on('click', 'a', function(event){
+//        event.preventDefault();
+//        smoothScroll($(this.hash));
+//        verticalNavigation.removeClass('open');
+//    });
 
     //smooth scroll to the second section
     scrollArrow.on('click', function(event){
