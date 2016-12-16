@@ -443,7 +443,7 @@ section.storyHeds.inset a.hideme, section.inset a.expandme {
    text-align:right;
     float:right;
     text-transform: uppercase;
-    font-size:.6em;
+    font-size:16px;
     text-decoration: none;
      border-bottom:none;
      margin-top: .75em;
@@ -481,19 +481,19 @@ section.storyHeds.inset a.expandme:before {
     margin-top:2em!important;
 }
 section.inset {
-    background:#f8f8f8;
+    background:#f4f4f4;
     padding:3em 0 6em;
     margin:6em auto;
 }
 
 section.storyHeds.inset {
-    background:#f8f8f8;
+    background:#f4f4f4;
     padding:0;
     margin:0 auto;
 }
 
 section.inset.right {
-    background:#f8f8f8;
+    background:#f4f4f4;
     padding:0 2em 2em;
     margin:.5em -20% .5em 1.5em;
     width: 50%;
@@ -501,7 +501,7 @@ section.inset.right {
     line-height:1.4;
 }
 section.inset.left {
-    background:#f8f8f8;
+    background:#f4f4f4;
     padding:0 2em 1em;
     margin:.5em 1.5em .5em -15%;
     width: 50%;
@@ -1484,7 +1484,9 @@ a:hover, * a:hover, a:hover * {
     width:96%;
     margin:.5em 2%;
 }
-
+.row .blockit ul {
+    margin-left: 0;
+}
 .row .blockit li {
     display:inline;
     float:left;
@@ -1696,7 +1698,7 @@ p.tapit  {
     font-style:normal;
     cursor:default; 
     text-indent:0;
-    background-color: #f8f8f8;
+    background-color: #f4f4f4;
     padding:1.75em 2em;
 
 }
@@ -2877,12 +2879,7 @@ div.title h4 {
     height: 45%;
   
 } 
-.row .blockit li {
-   width:46%;
-    height: 380px;
-    margin:2%;
 
-}
 
 
 }
@@ -2920,6 +2917,11 @@ div.title h4 {
 button, .button {
     padding: .7em .8em;
 }
+.row .blockit li {
+   width:46%;
+
+}
+
 
 }
 
@@ -3106,6 +3108,12 @@ button, .button {
 .centergallery button.slick-prev span {
     margin: -2.5em 0em 1em 0;
 }
+
+
+
+
+
+
 }
 
 
@@ -3234,6 +3242,24 @@ p.byline {
 p{
     line-height: 1.5;
 }
+
+.cd-nav-trigger {
+  bottom: 0;
+  right: 10px;
+  
+}
+.cd-vertical-nav {
+right:10px;
+  bottom: 10px;
+  width:90%;
+}
+.cd-vertical-nav.open ul .label {
+    font-size: .9em;
+}
+  .row .blockit a li .gridphoto {
+    height: 55%;
+  
+} 
 
 }
 /* ++++++++++++++++++++++++++++++++++++ 400px +++++++++++++++++++++++++++++++++ */
