@@ -1516,10 +1516,10 @@ a:hover, * a:hover, a:hover * {
     color: #000;
     text-align: center;
     width:40%;
-    margin:5% 10%;
+    margin:3% 10% 5%;
     border-bottom: 1px solid #c7c8ca;
     letter-spacing: 1px;
-    padding-bottom:.5em;
+    padding-bottom:.3em;
 }
 
 
@@ -1537,8 +1537,7 @@ a:hover, * a:hover, a:hover * {
 .row .blockit a li h2 span {
      display:block;
      font-family: Georgia, Times, 'Times New Roman', serif !important;
-   font-family:Georgia, Times, 'Times New Roman', serif !important;
-     font-weight: 300;
+       font-weight: 300;
     font-style: italic;
     font-size: 65%;
      text-transform:none;
@@ -1751,8 +1750,9 @@ p.tapit  {
     margin:0 auto .5em;
 }*/
 .centergallery button span {
-    font-family:Times, Georgia, serif !important;
-    font-size:5em;
+    font-family:Times, Georgia, serif;
+       font-family: 'Lato', Helvetica, Arial, sans-serif; !important;
+ font-size:5em;
     margin:0;
     display:block;
     color:rgba(153,153,153,0.8);
@@ -1789,6 +1789,7 @@ p.tapit  {
 .centergallery button.slick-prev span {
      margin:-1em -1.4em 1em 0;
 }
+
 
 /*
 .centergallery .columns {
@@ -3257,7 +3258,7 @@ right:10px;
     font-size: .9em;
 }
   .row .blockit a li .gridphoto {
-    height: 55%;
+    height: 52%;
   
 } 
 
