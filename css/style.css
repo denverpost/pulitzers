@@ -158,11 +158,13 @@ p {
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
     font-weight: 300;
     line-height: 1.65;
-    color: #666;
+    color: #222;
 
-    margin: 0 0 1.2em 0;
+    margin: 0 auto 1.2em;
+    
 
 }
+
 
 p em {
     font-size: 75%;
@@ -170,9 +172,12 @@ p em {
     letter-spacing: .04em;
     font-style: normal;
     font-weight: 400;
-     color: #777;
+     color: #444;
 }
 
+p em.edNote {
+   color: #ba5847;
+}
 p:last-child{
     margin-bottom: 3em;
 }
@@ -356,11 +361,7 @@ section.inset a.hideme, section.inset a.expandme {
     font-size:.9em;
     text-decoration: none;
 }
-section.inset a.hideme:after {
-    content: "\25B2";
-    display:inline-block;
-    padding:0 1em;
-}
+
 section.inset.right a.expandme {
     text-align:right;
     float:right;
@@ -419,15 +420,20 @@ section.inset.right a.expandme:before {
 /* --------------------- Expanding/Collapsing Sidebar --------------------- */
 
 
+section.storyHeds.inset {
 
-section.storyHeds.inset h3 {
-   text-align:left;
+}
+
+section.inset.storyHeds h3 {
+ text-align:left;
+ border-bottom: none;
+ padding-bottom: 0;
  }
 
 
 section.inset h4 {
    font-family:'Lato', Helvetica, Arial, sans-serif !important;
-  font-weight: 300;
+  font-weight: 400;
    text-align:center;
    text-transform: uppercase;
    font-size: 1.2em;
@@ -437,29 +443,56 @@ section.inset h4 {
 
 
 
-section.storyHeds.inset a.hideme, section.inset a.expandme {
+section.inset.storyHeds a.hideme, section.inset a.expandme {
    display:inline-block; 
    font-family:'Strait', Helvetica, Arial, sans-serif !important;
   font-weight: 300;
    text-align:right;
-    float:right;
-    text-transform: uppercase;
+      text-transform: uppercase;
     font-size:16px;
     text-decoration: none;
      border-bottom:none;
-     margin-top: .75em;
+    width:100%;
+    margin-top: 0;
+
 }
+
+section.inset.hedlines a.hideme, section.inset a.expandme {
+   display:inline-block; 
+   font-family:'Strait', Helvetica, Arial, sans-serif !important;
+  font-weight: 300;
+   text-align:right;
+      text-transform: uppercase;
+    font-size:16px;
+    text-decoration: none;
+     border-bottom:none;
+    width:100%;
+    margin-top: 0;
+
+}
+
 
 section.storyHeds.inset a.hideme:after {
     content: "\25B2";
     display:inline-block;
     font-size:.8em;
     padding:0 .5em;
-
+margin:0 5%;
+  
    
 }
 
-section.storyHeds.inset a.expandme:before {
+section.inset.hedlines a.hideme:after {
+    content: "\25B2";
+    display:inline-block;
+    font-size:.8em;
+    padding:0 .5em;
+margin:0 5%;
+  
+   
+}
+
+section.inset.hedlines a.expandme:before {
     content: "\25BC";
     display:inline-block;
     font-size:.8em;
@@ -486,12 +519,34 @@ section.inset {
     padding:3em 0 6em;
     margin:6em auto;
 }
-
+/*
 section.storyHeds.inset {
     background:#f4f4f4;
     padding:0;
     margin:0 auto;
 }
+*/
+
+
+
+
+
+section.inset.storyHeds {
+    background:#f4f4f4;
+    padding:0 5%;
+    margin:0 auto;
+    width: 100%;
+}
+
+
+section.inset.hedlines {
+    background:#fff;
+    padding:0 0 .5em;
+    margin:0;
+    width:100%;
+}
+
+
 
 section.inset.right {
     background:#f4f4f4;
@@ -509,11 +564,42 @@ section.inset.left {
     font-size:.9em;
     line-height:1.4;
 }
+
+
+
+
+
+
+
+
 section.inset.right h3.subheading,
 section.inset.left h3.subheading {
     font-size:1.45em;
     width:90%;
 }
+section.inset.hedlines h3.subheading {
+    font-size:1.45em;
+    width:90%;
+    padding:.5em 0 0;
+    text-align: left;
+    border-bottom: none;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+section.inset.hedlines.first h3.subheading {
+   border-top: 1px solid #aaa;
+    padding-top: 1em;
+}
+section.inset.hedlines p{
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #aaa;
+    width:90%;
+    margin: 0 auto
+}
+
+
+
 section.inset + section.inset {
     margin-top:12em;
     margin-top: 0;
@@ -534,13 +620,14 @@ section.inset h3.subheading {
 }
 
 
-section.storyHeds.inset h3.subheading {
+section.inset.storyHeds h3.subheading {
 /*      font-family:'Lato', Helvetica, Arial, sans-serif !important;
  font-weight:300;  */
  margin:0 auto;
     font-size:1.5em;
-    width:90%;
+    width:100%;
 }
+
 section.inset p, section.inset li, .reverse li {
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size:1.1em;
@@ -637,6 +724,8 @@ section.inset img.mug{
     margin:0 15% 1em;
 
 }
+
+
 
 /* grid related */
 /*[class*="block-grid-"] {
@@ -2982,7 +3071,9 @@ div.title h4 {
   
 } 
 
-
+section.inset.hedlines h3.subheading {
+    font-size:1.25em;
+}
 
 }
 
@@ -3212,7 +3303,9 @@ button, .button {
 }
 
 
-
+section.inset.hedlines h3.subheading {
+    font-size:1.15em;
+}
 
 
 
@@ -3362,7 +3455,10 @@ right:10px;
     height: 52%;
   
 } 
-
+.column, .columns {
+    padding-left: 0;
+    padding-right: 0;
+}
 }
 /* ++++++++++++++++++++++++++++++++++++ 400px +++++++++++++++++++++++++++++++++ */
 
