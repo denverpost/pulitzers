@@ -586,6 +586,65 @@ section.inset.hedlines h3.subheading {
     margin-bottom: 0;
     margin-top: 0;
 }
+
+                section.inset.hedlines2 {
+                     background-color: #fff;
+                     width: 90%;
+                     margin: 0 auto;
+                     padding:0;
+                     
+                }
+                section.inset.hedlines2 h3 a.expandme {
+                    font-family:'Lato', Helvetica, Arial, sans-serif !important;
+                    font-size:.85em;
+                    width:100%;
+                    padding:.5em 0 0;
+                    text-align: left;
+                    font-weight:900;
+                            display:block;
+                  
+                            border-bottom:1px solid #aaa;
+                     margin-top: 0;
+                    text-transform: none;
+                    color: #222;
+
+                }
+ 
+                
+                section.inset.hedlines2.first h3 a.expandme {
+                   border-top: 1px solid #aaa;
+                    padding-top: .5em;
+                }
+               section.inset.hedlines2 h3 a.expandme:hover {
+                    color: #2ba6cb;
+                } 
+                section.inset.hedlines2 h3 a.expandme span {
+                   display:inline-block; 
+                   font-family:'Strait', Helvetica, Arial, sans-serif !important;
+                  font-weight: 300;
+                   text-align:right;
+                      text-transform: uppercase;
+                    font-size:16px;
+                    text-decoration: none;
+                     border-bottom:none;
+                    width:100%;
+                    margin-top: 0;
+                     color: #2ba6cb;
+
+                }
+                section.inset.hedlines2 h3 a.expandme:hover span {
+                   
+                     color: #222;
+
+                }
+               section.inset.hedlines2 h3 a.expandme span::before{
+                    content: "\25BC";
+                    display:inline-block;
+                    font-size:.8em;
+                    padding:0 .35em;
+                }
+
+
 section.inset.hedlines.first h3.subheading {
    border-top: 1px solid #aaa;
     padding-top: 1em;
@@ -619,6 +678,11 @@ section.inset h3.subheading {
     width:90%;
 }
 
+            section.inset h3.subheading a.expandme {
+                margin:1em auto;
+                font-size:1.7em;
+                width:90%;
+            }
 
 section.inset.storyHeds h3.subheading {
 /*      font-family:'Lato', Helvetica, Arial, sans-serif !important;
@@ -1480,7 +1544,7 @@ h3.subheading {
     border-bottom:1px solid rgba(0,0,0,.3);
 }
 
-
+                    
 h3.subheading.last {
     border-bottom:none;
 }
