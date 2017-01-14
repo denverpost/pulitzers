@@ -571,6 +571,84 @@ section.inset.left {
 
 
 
+                section.inset.entryHeds a.hideme {
+                    display:inline-block; 
+                    font-family:'Strait', Helvetica, Arial, sans-serif !important;
+                    font-weight: 300;
+                    text-align:right;
+                    text-transform: uppercase;
+                    font-size:16px;
+                    text-decoration: none;
+                    border-bottom:none;
+                    width:100%;
+                    margin-top: 0;
+
+                }
+
+                section.inset.entryHeds a.hideme:after {
+                    content: "\25B2";
+                    display:inline-block;
+                    font-size:.8em;
+                    padding:0 .5em;
+                    margin:0 5%;
+                  
+                   
+                }
+
+                .row.entryHeds {
+                    margin-bottom: 3em;
+                }
+
+                section.inset.entryHeds {
+                    background:#fff;
+                    padding:0 0 .5em;
+                    margin:0;
+                    width:100%;
+                }
+
+                section.inset.entryHeds a.expandme {
+                    font-family:'Lato', Helvetica, Arial, sans-serif !important;
+                    font-size:.85em !important;
+                    text-transform: none;
+                    font-weight: 900;
+                    color: #222;
+                    text-align: left;
+                    width: 100% !important;
+                }
+
+                section.inset.entryHeds a.expandme:hover {
+                    color: #2ba6cb;
+                 }
+
+                section.inset.entryHeds a.expandme span{
+                    display:inline-block; 
+                    font-family:'Strait', Helvetica, Arial, sans-serif !important;
+                    font-weight: 300;
+                    text-align:right;
+                    text-transform: uppercase;
+                    font-size:16px;
+                    text-decoration: none;
+                    border-bottom:1px solid #aaa;
+                    width:100%;
+                    margin-top: 0;
+                    color: #2ba6cb;
+                }
+
+                section.inset.entryHeds a.expandme span:hover{
+                    color: #222;
+                }
+                section.inset.entryHeds a.expandme span:before {
+                    content: "\25BC";
+                    display:inline-block;
+                    font-size:.8em;
+                    padding:0 .5em;
+                }
+
+
+
+
+
+
 
 section.inset.right h3.subheading,
 section.inset.left h3.subheading {
