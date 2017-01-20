@@ -443,7 +443,7 @@ section.inset h4 {
 
 
 
-section.inset.storyHeds a.hideme, section.inset a.expandme {
+/*section.inset.storyHeds a.hideme, section.inset a.expandme {
    display:inline-block; 
    font-family:'Strait', Helvetica, Arial, sans-serif !important;
   font-weight: 300;
@@ -455,7 +455,7 @@ section.inset.storyHeds a.hideme, section.inset a.expandme {
     width:100%;
     margin-top: 0;
 
-}
+}*/
 
 section.inset.hedlines a.hideme, section.inset a.expandme {
    display:inline-block; 
@@ -472,7 +472,7 @@ section.inset.hedlines a.hideme, section.inset a.expandme {
 }
 
 
-section.storyHeds.inset a.hideme:after {
+section.storyHeds.inset a.hideme::after {
     content: "\25B2";
     display:inline-block;
     font-size:.8em;
@@ -482,7 +482,7 @@ margin:0 5%;
    
 }
 
-section.inset.hedlines a.hideme:after {
+section.inset.hedlines a.hideme::after {
     content: "\25B2";
     display:inline-block;
     font-size:.8em;
@@ -491,21 +491,49 @@ margin:0 5%;
   
    
 }
-
-section.inset.hedlines a.expandme:before {
+/*
+section.inset.hedlines a.expandme::before {
     content: "\25BC";
     display:inline-block;
     font-size:.8em;
     padding:0 .5em;
 }
+*/
+                                            section.inset.hedlines a.expandme p {
+                                                font-family:'Strait', Helvetica, Arial, sans-serif !important;
+                                                font-weight: 300;
+                                                text-align:right;
+                                                text-transform: uppercase;
+                                                font-size:16px;
+                                                text-decoration: none;
+                                                width:90%;
+                                                margin:0 auto;
+                                                color: #2ba6cb;
+                                                padding-bottom: 0;
+                                            }                                            
 
+                                            section.inset.hedlines a.expandme p::before {
+                                                content: "\25BC";
+                                                display:inline-block;
+                                                font-size:.8em;
+                                                padding:0 .5em;
+                                            }
 
-
+                                            section.inset.hedlines a.expandme h3 {
+                                                text-transform: none;
+                                            }
+                                            section.inset.hedlines a.expandme:hover h3 {
+                                                color: #2ba6cb;
+                                             }
+                                      
 
 .row.hedlines {
     margin-bottom: 3em;
 }
 
+.row.hedlines {
+    margin-bottom: .65em;
+}
 
 
 .columns section.large-inset,
@@ -514,6 +542,17 @@ section.inset.hedlines a.expandme:before {
     padding:2em;
     margin-top:2em!important;
 }
+
+
+
+                                            .columns section.inset.hedlines + .columns section.large-inset {
+                                                margin:2em auto;
+                                                padding:2em;
+                                                margin-top:6em!important;
+                                            }
+
+
+
 section.inset {
     background:#f4f4f4;
     padding:3em 0 6em;
@@ -567,8 +606,62 @@ section.inset.left {
 
 
 
+                .row.entryHeds {
+                    margin-bottom: 3em;
+                }
 
+                section.inset.entryHeds {
+                    background:#fff;
+                    padding:0 0 .5em;
+                    margin:0 auto;
+                    width:90%;
 
+                }
+
+                section.inset.entryHeds h3 a.expandme {
+                    display:block;
+                    font-family:'Lato', Helvetica, Arial, sans-serif !important;
+                    font-size:.85em !important;
+                    text-transform: none;
+                    font-weight: 900;
+                    color: #222;
+                    text-align: left;
+                    width: 100% !important;
+                    border-bottom:1px solid #aaa;
+ 
+                }
+                section.inset.entryHeds.first h3 a.expandme {
+                   border-top: 1px solid #aaa;
+                    padding-top: .5em;
+                }
+                
+               section.inset.entryHeds h3 a span{
+                    display:inline-block;
+                    font-family:'Strait', Helvetica, Arial, sans-serif !important;
+                    font-weight: 300;
+                    text-align:right;
+                    text-transform: uppercase;
+                    font-size:16px;
+                    text-decoration: none;
+                     width:100%;
+                    margin-top: 0;
+                      color: #2ba6cb;
+                } 
+
+       /*         section.inset.entryHeds a.expandme span:hover{
+                    color: #222;
+                }*/
+
+                section.inset.entryHeds h3 a:hover {
+                    color: #2ba6cb;
+                 }
+
+                section.inset.entryHeds a.expandme span:before {
+                    content: "\25BC";
+                    display:inline-block;
+                    font-size:.8em;
+                    padding:0 .5em;
+                }
 
 
                 section.inset.entryHeds a.hideme {
@@ -594,57 +687,6 @@ section.inset.left {
                   
                    
                 }
-
-                .row.entryHeds {
-                    margin-bottom: 3em;
-                }
-
-                section.inset.entryHeds {
-                    background:#fff;
-                    padding:0 0 .5em;
-                    margin:0;
-                    width:100%;
-                }
-
-                section.inset.entryHeds a.expandme {
-                    font-family:'Lato', Helvetica, Arial, sans-serif !important;
-                    font-size:.85em !important;
-                    text-transform: none;
-                    font-weight: 900;
-                    color: #222;
-                    text-align: left;
-                    width: 100% !important;
-                }
-
-                section.inset.entryHeds a.expandme:hover {
-                    color: #2ba6cb;
-                 }
-
-                section.inset.entryHeds a.expandme span{
-                    display:inline-block; 
-                    font-family:'Strait', Helvetica, Arial, sans-serif !important;
-                    font-weight: 300;
-                    text-align:right;
-                    text-transform: uppercase;
-                    font-size:16px;
-                    text-decoration: none;
-                    border-bottom:1px solid #aaa;
-                    width:100%;
-                    margin-top: 0;
-                    color: #2ba6cb;
-                }
-
-                section.inset.entryHeds a.expandme span:hover{
-                    color: #222;
-                }
-                section.inset.entryHeds a.expandme span:before {
-                    content: "\25BC";
-                    display:inline-block;
-                    font-size:.8em;
-                    padding:0 .5em;
-                }
-
-
 
 
 
