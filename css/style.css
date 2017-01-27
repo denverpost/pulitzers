@@ -2462,6 +2462,34 @@ a.startVideo:hover {
     width: 60%;
     margin-left: -30%;
 }
+
+                                /*           #photosModal.infobox {
+                                                margin-top: -90px;
+                                                height: 100%;
+                                                 z-index: 901;
+
+                                            }
+                                            #photosModal.infobox p {
+                                                text-transform: none;
+                                                letter-spacing: 0;
+
+                                            }
+
+                                            #photosModal.reveal-modal {
+                                                width: 100%;
+                                                margin-left: -50%;
+
+                                            } */
+
+                                            #inset3 .my-simple-gallery a {
+                                                margin:1%;
+                                                width:10.5%;
+
+                                            }
+                                            #inset3 .row-gallery p{
+                                                font-size: .9em;
+                                            }
+                                           
 /*.reveal-modal .close-reveal-modal {
     font-size:1.375em;
     line-height:1;
