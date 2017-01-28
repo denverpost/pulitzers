@@ -2463,7 +2463,7 @@ a.startVideo:hover {
     margin-left: -30%;
 }
 
-                                /*           #photosModal.infobox {
+                                           #photosModal.infobox {
                                                 margin-top: -90px;
                                                 height: 100%;
                                                  z-index: 901;
@@ -2479,7 +2479,7 @@ a.startVideo:hover {
                                                 width: 100%;
                                                 margin-left: -50%;
 
-                                            } */
+                                            } 
 
                                             #inset3 .my-simple-gallery a {
                                                 margin:1%;
@@ -2489,7 +2489,11 @@ a.startVideo:hover {
                                             #inset3 .row-gallery p{
                                                 font-size: .9em;
                                             }
-                                           
+                                             #inset3 .row-gallery #photoGrid img{
+                                                margin-top:1em;
+                                                width:100%;
+                                                height: auto;
+                                            }
 /*.reveal-modal .close-reveal-modal {
     font-size:1.375em;
     line-height:1;
