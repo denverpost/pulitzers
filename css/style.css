@@ -2,16 +2,14 @@ body {
 	background:rgba(255,255,255,1);
     background:#fff;
     z-index:1;
-    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
+    font-family:'Lato', Helvetica, Arial, sans-serif !important;
 }
-
 #gridnav{
     background:#e8e8e8;
 }
 .fixed {
     z-index:900;
 }
-
 figure {
     margin: 0;
 }
@@ -52,6 +50,18 @@ figure {
     text-decoration:none;
     cursor:pointer;
 }
+#adwrapper a.boxclose:hover {
+    color:#333;
+}
+#adwrapper .boxclose:before, .gridbox.expanded .gridphoto a.boxclose:before {
+    content:"\2715";
+    text-decoration:none;
+}
+
+
+
+
+/*
 .opener div#title {
     position: absolute;
     z-index: -1;
@@ -75,13 +85,11 @@ figure {
     word-spacing:12px;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
-#adwrapper a.boxclose:hover {
-    color:#333;
-}
-#adwrapper .boxclose:before, .gridbox.expanded .gridphoto a.boxclose:before {
-    content:"\2715";
-    text-decoration:none;
-}
+
+*/
+
+
+
 nav.top-bar {
     z-index:99;
     -webkit-box-shadow:0px 2px 3px rgba(0, 0, 0, 0.25);
@@ -153,40 +161,52 @@ div#name2 {
      letter-spacing: 1px;
 }
 
+
+/* ----------------------------- TEXT TYPE ----------------------------- */ 
+
+
 p {
     font-size:1.2em;
     font-family:'Lato', Helvetica, Arial, sans-serif !important;
     font-weight: 300;
     line-height: 1.65;
     color: #000;
-
     margin: 0 auto 1.2em;
-    
-
 }
-
 p span.dateline {
     font-size:75%;
-     font-weight: 900;
-      text-transform: uppercase;    
-
+    font-weight: 900;
+    text-transform: uppercase;    
 }
-
 p em {
     font-size: 75%;
     text-transform: uppercase;
     letter-spacing: .04em;
     font-style: normal;
     font-weight: 400;
-     color: #444;
+    color: #444;
 }
-
+p.byline {
+    font-family:Georgia, Times, 'Times New Roman', serif !important;
+    font-weight: 300;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    color: #000;
+    margin-bottom: 4em;
+}
+p.byline em{
+    text-transform: none;
+    font-size: 90%;
+}
 p em.edNote {
    color: #ba5847;
 }
-p:last-child{
+p:last-child {
     margin-bottom: 3em;
 }
+
+/*
 p.lead {
     font-size:1.25em;
     line-height:1.7;
@@ -201,20 +221,11 @@ p.blurb {
     margin:.2em auto .5em;
     font-weight:400;
 }
-p.byline {
-    font-family:Georgia, Times, 'Times New Roman', serif !important;
-    font-weight: 300;
-    font-style: italic;
-   text-align:center;
-    font-size:1em;
-    margin-bottom:4em;
-    font-style: italic;
-    color: #000;
-}
-p.byline em{
-    text-transform: none;
-    font-size: 90%;
-}
+
+*/
+
+
+
 p.bylinebottom {
   
 text-align:center;
@@ -223,38 +234,37 @@ text-align:center;
 }
 
 
+/* ----------------------------- ARTICLE TAG ----------------------------- */ 
 
-
-
-
-
-
-
-
-
-
-
-.teasers{
+.teasers {
     margin-top: 3em;
 }
-
-.teasers p{
+.teasers p {
+    width:50%;
     font-family:'Strait',Helvetica,Arial,sans-serif !important;
     text-align: center;
-    
-     border-top:1px solid #c9c9c9;
     font-size: 1.65em;
-    width:50%;
-    margin: 0 auto;
     line-height: 1.15;
-    padding: .5em 0;
     text-transform: uppercase;
     letter-spacing: 1px;
     color:  #95273c;
-
+    margin: 0 auto;
+    padding: .5em 0;
+    border-top:1px solid #c9c9c9; 
+}
+.teasers p:last-child {
+    border-bottom: 1px solid #c9c9c9;
+    margin-bottom: 1em;
 }
 
 
+
+
+
+
+
+
+/*
 
 .teasers h5{
 font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
@@ -279,12 +289,9 @@ text-align: center;
 .teasers p span{
     font-size: 125%
 }
+*/
 
-.teasers p:last-child{
-    border-bottom: 1px solid #c9c9c9;
-   margin-bottom: 1em;
-
-}
+/*
 .teasers p a{
     border-bottom: none;
 
@@ -339,7 +346,7 @@ text-align: center;
     font-size: 75%;
 }
 
-
+*/
 
 
 
@@ -360,7 +367,7 @@ text-align: center;
 }
 
 
-
+/*
 
 section.inset a.hideme, section.inset a.expandme {
     text-transform: uppercase;
@@ -372,47 +379,67 @@ section.inset.right a.expandme {
     text-align:right;
     float:right;
 }
+
+
 section.inset.right a.expandme:before {
     content: "\25C0";
     display:inline-block;
     padding:0 1em;
-}
+}*/
 section.inset.left a.expandme:after {
     content:'\25BA';
     display:inline-block;
     padding:0 1em;
 }
-/* --------------------- Expanding/Collapsing Sidebar --------------------- */
-section.inset a.hideme, section.inset a.expandme {
-     font-family:'Strait',Helvetica,Arial,sans-serif !important;
-   text-align:right;
-    float:right;
-    text-transform: uppercase;
-    font-size:.9em;
-    text-decoration: none;
-    margin-top:.5em;
-    border-bottom:none;
-}
 
+
+
+
+
+
+/* --------------------- Expanding/Collapsing Sidebars --------------------- */
+
+section.inset.hedlines a.hideme, section.inset a.hideme, section.inset a.expandme {
+    display:inline-block; 
+    font-family:'Strait', Helvetica, Arial, sans-serif !important;
+    font-weight: 300;
+    text-align:right;
+    text-transform: uppercase;
+    font-size:16px;
+    text-decoration: none;
+    border-bottom:none;
+    width:100%;
+    margin-top: 0;
+}
 section.inset a.hideme:after {
     content: "\25B2";
     display:inline-block;
     font-size:.8em;
-    padding:0 .5em;
-
-   
+    padding:0 .5em;   
 }
 section.inset.right a.expandme {
     text-align:right;
     float:right;
 }
-
 section.inset.right a.expandme:before {
     content: "\25C0";
     display:inline-block;
     font-size:.8em;
     padding:0 .5em;
 }
+.columns section.large-inset h3.subheading {
+    margin-top: 0;
+}
+.columns section.large-inset {
+    margin:2em auto;
+    padding: 2em 2em 0;
+}
+/*.columns section.large-inset,
+.columns section.inset + .columns section.large-inset {
+    margin:2em auto;
+    padding:2em;
+    margin-top:2em!important;
+}*/
 
 
 
@@ -423,7 +450,14 @@ section.inset.right a.expandme:before {
 
 
 
-/* --------------------- Expanding/Collapsing Sidebar --------------------- */
+
+
+
+
+
+
+
+
 
 
 section.storyHeds.inset {
@@ -470,19 +504,7 @@ section.inset h4 span{
 
 }*/
 
-section.inset.hedlines a.hideme, section.inset a.expandme {
-   display:inline-block; 
-   font-family:'Strait', Helvetica, Arial, sans-serif !important;
-  font-weight: 300;
-   text-align:right;
-      text-transform: uppercase;
-    font-size:16px;
-    text-decoration: none;
-     border-bottom:none;
-    width:100%;
-    margin-top: 0;
 
-}
 
 
 section.storyHeds.inset a.hideme::after {
@@ -578,12 +600,7 @@ section.inset.hedlines a.expandme::before {
                                                 margin-top: 0;
                                             }
 
-.columns section.large-inset,
-.columns section.inset + .columns section.large-inset {
-    margin:2em auto;
-    padding:2em;
-    margin-top:2em!important;
-}
+
 
 
 
@@ -594,19 +611,55 @@ section.inset.hedlines a.expandme::before {
                                             }
 
 
+/* --------------------- INSETS --------------------- */
 
 section.inset {
     background:#f4f4f4;
     padding:3em 0 6em;
     margin:6em auto;
 }
+section.inset.right {
+    width: 50%;
+    font-size:.9em;
+    line-height:1.4; 
+    /*  background:#f4f4f4;*/
+    padding:0 2em 2em;
+    margin:.5em -20% .5em 1.5em;
+}
+section.inset.right h3.subheading,
+section.inset.left h3.subheading {
+    font-size:1.45em;
+    width:90%;
+}
+section.inset p, section.inset li, .reverse li {
+    font-size:1.1em;
+    list-style-type: none;
+}
+section.inset h3.subheading {
+    margin:1em auto;
+    font-size:1.7em;
+    width:90%;
+}
+
+
+
+
+
+
+
+
 /*
 section.storyHeds.inset {
     background:#f4f4f4;
     padding:0;
     margin:0 auto;
 }
-*/
+
+
+
+
+
+
 
 
 
@@ -619,7 +672,7 @@ section.inset.storyHeds {
     width: 100%;
 }
 
-
+*/
 section.inset.hedlines {
     background:#fff;
     padding:0 0 .5em;
@@ -629,14 +682,6 @@ section.inset.hedlines {
 
 
 
-section.inset.right {
-    background:#f4f4f4;
-    padding:0 2em 2em;
-    margin:.5em -20% .5em 1.5em;
-    width: 50%;
-    font-size:.9em;
-    line-height:1.4;
-}
 section.inset.left {
     background:#f4f4f4;
     padding:0 2em 1em;
@@ -834,11 +879,25 @@ section.inset div.title.lowertitle h1 {
     padding-bottom:12%;
     font-size:2.25em;
 }
-section.inset h3.subheading {
-    margin:1em auto;
-    font-size:1.7em;
-    width:90%;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             section.inset h3.subheading a.expandme {
                 margin:1em auto;
@@ -854,11 +913,7 @@ section.inset.storyHeds h3.subheading {
     width:100%;
 }
 
-section.inset p, section.inset li, .reverse li {
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    font-size:1.1em;
-    list-style-type: none;
-}
+
 
 
 
@@ -1001,14 +1056,7 @@ section.inset img.mug{
 .gridbox.expanded .inset-video-center {
     z-index: 90;
 }*/
-.gridphoto {
-    position: relative;
-    width:100%;    
-    background-size:cover;
-    background-position: center center;
-    overflow:hidden;
-    pointer-events:none;
-}
+
 
 
 
@@ -1401,6 +1449,7 @@ section.inset img.mug{
 
 
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ TOOLTIPS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 .tooltip {
@@ -1425,11 +1474,10 @@ section.inset img.mug{
     font-weight:700;
     color: #333;
     border-bottom: none;
-
 }
-
 .tooltip.radius {
-    border-radius: 10px; }
+    border-radius: 10px; 
+}
 p.lead .has-tip {
     font-weight: 700;
 }
@@ -1458,7 +1506,20 @@ p.lead .has-tip {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++ DISPLAY TYPOGRAPHY +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
- h2{
+
+h1, h3 {
+    text-align: center;
+    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
+    font-weight:700;   
+}
+
+
+
+
+
+/*
+
+ h2 {
    font-size: 3em;
    color:#2ba6cb;
    display: inline-block;
@@ -1466,6 +1527,79 @@ p.lead .has-tip {
    margin-left: 1%;
    line-height: 1.25;
 }
+
+*/
+
+div.title h1 {
+    margin:1.5em 0 1.25em;
+    font-size:5em;
+    letter-spacing:-1px;
+    line-height:1.05;
+    color:#333;
+    display:block;
+    z-index:-1;
+}
+div.title h1 em {
+    color:rgba(0,0,0,0.35);
+    font-style: normal;
+}
+div.title.more h2 {
+    display:block;
+    text-align: center;
+    font-family:'Lato', Helvetica, Arial, sans-serif !important;
+    font-weight:300;
+    font-size:3.2em;
+    letter-spacing:0;
+    line-height:1.15;
+    color:#000;
+    margin:0 0 .75em;
+    z-index:-1;
+}
+h3.subheading {
+    font-family:'Lato', Helvetica, Arial, sans-serif !important;
+    font-size:2.2em;
+    font-weight:900;
+    display:block;
+    text-align:center;
+    margin:3.5em auto 1.5em;
+    padding:.5em 0 .75em;
+    width:70%;
+    border-bottom:1px solid rgba(0,0,0,.3);
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ INDEX DISPLAY TYPOGRAPHY +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+#prizes h1{
+    text-align: left;
+    font-size:3em;
+    line-height: 1.15; 
+    letter-spacing: -.02em;
+    color:#fff;
+    margin:0 0 2%;
+    padding:2em;
+    background-image:url('../img/banner3.jpg');
+    background-size: cover;
+    background-position: center center;
+    text-shadow:0px 0px 4px rgba(0,0,0,.65); 
+}
+#prizes h1 span{
+    display:block;
+    font-family: 'Lato',Helvetica,Arial,sans-serif!important;
+    font-weight: 300;
+    font-size:70%;
+    letter-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1505,10 +1639,7 @@ div.title h3.subheading {
     margin-top:1em;
 }
 
-div.title h1 em {
-    color:rgba(0,0,0,0.35);
-    font-style: normal;
-}
+
 
 
 
@@ -1537,37 +1668,16 @@ div.title.more{
 
 
 
-div.title h1,
-div.title h2 {
-    margin:1.5em 0 1.25em;
-    text-align: center;
-    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-    font-weight:700;
-    font-size:5em;
-    letter-spacing:-1px;
-    line-height:1.05;
-    color:#333;
-    display:block;
-    z-index:-1;
+
+
+
+
+
+
+
+#pulitzers{
+     margin:0 auto 10%;
 }
-
-
-
-div.title.more h1,
-div.title.more h2 {
-    display:block;
-    margin:0 0 .65em;
-    text-align: center;
-    font-family:'Lato', Helvetica, Arial, sans-serif !important;
-    font-weight:300;
-    font-size:3.2em;
-    letter-spacing:0;
-    line-height:1.15;
-    color:#000;
-    z-index:-1;
-}
-
-
 
 
 
@@ -1634,10 +1744,7 @@ div.title h3 {
     display:block;
     z-index:-1;
 }
-h1, h2, h3, h4 {
- /* 	font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-   font-weight:700;*/
-}
+
 
 .photogrid ul {
     margin:0;
@@ -1694,17 +1801,6 @@ h1, h2, h3, h4 {
 
 
 
-h3.subheading {
-    font-family:'Noticia Text', Georgia, Times, serif;
-    font-family:'Lato', Helvetica, Arial, sans-serif !important;font-size:2.2em;
-    font-weight:900;
-    display:block;
-    text-align:center;
-    margin:3.5em auto 1.5em;
-    padding:.5em 0 .75em;
-    width:70%;
-    border-bottom:1px solid rgba(0,0,0,.3);
-}
 
                     
 h3.subheading.last {
@@ -1763,38 +1859,9 @@ a:hover, * a:hover, a:hover * {
 
 
 
-#prizes h1{
-    margin:1.35em 5% .75em;
-    text-align: left;
-    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-    font-weight: 700;
-    font-size:3em;
-    line-height: 1.15; 
-    letter-spacing: -.02em;
-    
-
-    margin:0 0 2%;
-    color:#fff;
-    background-image:url('../img/banner3.jpg');
-    background-size: cover;
-    background-position: center center;
-    padding:2em;
-    text-shadow:0px 0px 4px rgba(0,0,0,.65); 
-}
-#prizes h1 span{
-    display:block;
-    font-family: 'Lato',Helvetica,Arial,sans-serif!important;
-    font-weight: 300;
-    font-size:70%;
-   letter-spacing: 0;
- }
 
 
-#pulitzers{
-     margin:0 auto 10%;
-}
-
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ INDEX NAV CARDS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .row .blockit {
     width:96%;
@@ -1811,54 +1878,48 @@ a:hover, * a:hover, a:hover * {
     width:29.3%;
     height: 380px;
     margin:2%;
-
 }
-
-
-/* CAN KILL once html cleaned up */
-.row .blockit a li .gridphoto {
+.row .blockit li .card {
+    /*display:inline;
+    float:left;
+    list-style-type: none;
+    background-color: #fff;*/
+    width:100%;
+    height: 380px;
+    margin:0;
+}
+.gridphoto {
+    position: relative;
+    background-size:cover;
+    background-position: center center;
+    overflow:hidden;
+    pointer-events:none;
+}
+.row .blockit li a .gridphoto {
     width:100%;
     height: 45%;
     border-right: 14px solid #fff;
-  border-left: 14px solid #fff;
-
- border-top: 14px solid #fff;
-
+    border-left: 14px solid #fff;
+    border-top: 14px solid #fff;
 }
-
-.row .blockit a li h3 {
-    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-    font-weight: 700;
+.row .blockit li a:hover .gridphoto {
+    border-right: none;
+    border-left: none;
+    border-top:none;
+}
+.row .blockit li a h3 {
+/*  font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
+    font-weight: 700;*/
+    width:40%;
     font-style: italic;
     font-size: 1.35em;
-    color: #000;
-    text-align: center;
-    width:40%;
-    margin:3% 10% 5%;
-    border-bottom: 1px solid #c7c8ca;
     letter-spacing: 1px;
-    padding-bottom:.3em;
-}
-
-
-.row .blockit a li h2 {
-    font-family:'Strait',Helvetica,Arial,sans-serif!important;
-    font-weight:400;
-    text-transform: uppercase; 
-    font-size: 1.3em;
     color: #000;
-    text-align: left;
-    margin:0 10%;
-    line-height:1;
-   }
-
-
-
-
-
-
-
-
+  /*  text-align: center;*/
+    margin:3% 10% 5%;
+    padding-bottom:.3em;
+    border-bottom: 1px solid #c7c8ca;
+}
 .row .blockit li a h2 {
     font-family:'Strait',Helvetica,Arial,sans-serif!important;
     font-weight:400;
@@ -1868,41 +1929,19 @@ a:hover, * a:hover, a:hover * {
     text-align: left;
     margin:0 10%;
     line-height:1;
-   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-.row .blockit a li h2 span {
-     display:block;
-     font-family: Georgia, Times, 'Times New Roman', serif !important;
-       font-weight: 300;
+}
+.row .blockit li a h2 span {
+    display:block;
+    font-family: Georgia, Times, 'Times New Roman', serif !important;
+    font-weight: 300;
     font-style: italic;
     font-size: 65%;
-     text-transform:none;
+    text-transform:none;
     color:#999;
-    padding-top: 2%;
     line-height:1.3;
-        }
-
-.row .blockit a:hover li .gridphoto {
- border-right: none;
-  border-left: none;
-
- border-top:none;
-
- }
-
-.row .blockit a:hover li h2 {
+    padding-top: 2%;
+}
+.row .blockit li a:hover h2 {
     color:#259ce1;
 }
 
@@ -1911,73 +1950,9 @@ a:hover, * a:hover, a:hover * {
 
 
 
-.row .blockit li .card {
-    display:inline;
-    float:left;
-    list-style-type: none;
-    background-color: #fff;
-    width:100%;
-    height: 380px;
-    margin:0;
-
-}
 
 
-.row .blockit li a .gridphoto {
-    width:100%;
-    height: 45%;
-    border-right: 14px solid #fff;
-  border-left: 14px solid #fff;
 
- border-top: 14px solid #fff;
-
-}
-.row .blockit li a h3 {
-    font-family: 'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 1.35em;
-    color: #000;
-    text-align: center;
-    width:40%;
-    margin:3% 10% 5%;
-    border-bottom: 1px solid #c7c8ca;
-    letter-spacing: 1px;
-    padding-bottom:.3em;
-}
-.row .blockit li a h2 {
-    font-family:'Strait',Helvetica,Arial,sans-serif!important;
-    font-weight:400;
-    text-transform: uppercase; 
-    font-size: 1.3em;
-    color: #000;
-    text-align: left;
-    margin:0 10%;
-    line-height:1;
-   }
-.row .blockit li a h2 span {
-     display:block;
-     font-family: Georgia, Times, 'Times New Roman', serif !important;
-       font-weight: 300;
-    font-style: italic;
-    font-size: 65%;
-     text-transform:none;
-    color:#999;
-    padding-top: 2%;
-    line-height:1.3;
-        }
-
-.row .blockit li a:hover .gridphoto {
- border-right: none;
-  border-left: none;
-
- border-top:none;
-
- }
-
-.row .blockit li a:hover h2 {
-    color:#259ce1;
-}
 
 
 
@@ -2020,28 +1995,7 @@ div.more-button {
 .row.solo.chart-late {
     margin-bottom:2em;
 }
-.photorow {
-    margin:2em 0 4em;
-    padding:0;
-    width:100%;
-}
-.photorow.twinphoto{
-    margin:0 0 2em;
-    padding:0;
-    width:100%;
-}
-.twinphoto .photoleft {
-    width:50%;
-    float:left;
-    padding-right:.75em;
-    display:inline-block;
-}
-.twinphoto .photoright {
-    width:50%;
-    float:right;
-    padding-left:.75em;
-    display:inline-block;
-}
+
 
 
 .twinphoto.pulitzer-buttons .photoright {
@@ -2076,6 +2030,11 @@ p.tapit  {
 .twinphoto .photoright .caption {
     padding-right:1em;
 }*/
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++ PHOTOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .centerphoto {
     width:100%;
     padding:0;
@@ -2086,11 +2045,75 @@ p.tapit  {
     padding:0;
     margin:3em 0 3em;
 }
+/*for first photo below the headline and byline*/
 .centerphoto3 {
     width:100%;
     padding:0;
     margin:0 0 3em;
 }
+.photorow {
+    margin:2em 0 4em;
+    padding:0;
+    width:100%;
+}
+.photorow.twinphoto{
+    margin:0 0 2em;
+    padding:0;
+    width:100%;
+}
+.twinphoto .photoleft {
+    width:50%;
+    float:left;
+    padding-right:.75em;
+    display:inline-block;
+}
+.twinphoto .photoright {
+    width:50%;
+    float:right;
+    padding-left:.75em;
+    display:inline-block;
+}
+.caption {
+    font-size:1em;
+    line-height:1.5;
+    color:rgba(0,0,0,0.8);
+    margin:0;
+    text-indent: 0;
+  /*  font-family:'Lato', Helvetica, Arial, sans-serif;*/
+    font-weight:400;
+    font-style:normal;
+    cursor:default; 
+    background-color: #f4f4f4;
+    padding:1.75em 2em;
+}
+.caption:last-child {
+   margin-bottom: 1em;
+}
+.caption span.photog {
+/*    width: 100%;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;*/
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: .65em;
+    letter-spacing: 1px;
+    font-style: normal;
+    color:rgba(0,0,0,0.6);
+    text-align: right;
+    padding:0 0 .5em .25em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .centerphoto3.entry{
     margin-bottom: .5em;
@@ -2102,7 +2125,7 @@ p.tapit  {
 .inset-video-right .centerphoto {
     margin:0 0 1em;
 }
-.caption {
+/*.caption {
   	font-size:1em;
     line-height:1.5;
     color:rgba(0,0,0,0.8);
@@ -2116,16 +2139,14 @@ p.tapit  {
     background-color: #f4f4f4;
     padding:1.75em 2em;
 
-}
+}*/
 /*
 #photosgallery .caption{
     max-height: 20em;
     overflow-y:scroll;
 
 }*/
-.caption:last-child {
-   margin-bottom: 1em;
-}
+
 
 
 .caption span.captionhed {
@@ -2134,19 +2155,7 @@ p.tapit  {
     font-weight:800;
     padding-right:.5em;
 }
-.caption span.photog {
-    text-transform: uppercase;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: .65em;
-    letter-spacing: 1px;
-    font-style: normal;
-    color:rgba(0,0,0,0.6);
-    width: 100%;
-    text-align: right;
-    padding:0 0 .5em .25em;
-}
+
 .caption span.capwarning {
     color:rgba(0,0,0,0.5);
     font-weight:700;
