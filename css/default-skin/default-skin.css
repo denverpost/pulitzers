@@ -286,8 +286,9 @@ a.pswp__share--download:hover {
   color: #CCC; 
 }
   
-  .pswp__caption__center span {
+  .pswp__caption__center em {
   text-transform:uppercase;
+  font-style: normal;
   font-size:75%;
   color: #888; 
 }
@@ -494,17 +495,22 @@ a.pswp__share--download:hover {
 .pswp--minimal--dark .pswp__top-bar {
   background: none; }
 
-
-
-/** ---------------------------------------------- 480 ---------------------------------------------- **/
-@media only screen and (max-width: 480px) {
+/** ---------------------------------------------- 640 ---------------------------------------------- **/
+@media only screen and (max-width: 640px) {
+    
     .pswp__caption__center {
       font-size: .85em;
         line-height: 1.25;
-       /*   max-height: 66px;
+        padding:1em;
+      /*   
       display:none;
+        /* max-height: 66px;
        overflow-y: scroll;*/
     }
+
+     .pswp__caption__center span{
+      display:none;
+     }
     .pswp__button--arrow--left,
 .pswp__button--arrow--right {
   display:none;

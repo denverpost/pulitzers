@@ -3346,6 +3346,12 @@ section.inset.hedlines h3.subheading {
     font-size:1.25em;
 }
 
+#inset3 .my-simple-gallery a {
+    margin:1%;
+    width:14.66%;
+}
+
+
 }
 
 /* ------------------------------------------  680px ------------------------------------------  */
@@ -3579,6 +3585,9 @@ section.inset.hedlines h3.subheading {
 }
 
 
+section.inset h4 {
+    margin: .9em 0 .75em;
+ }
 
 }
 
