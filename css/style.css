@@ -236,10 +236,10 @@ text-align:center;
 
 /* ----------------------------- ARTICLE TAG ----------------------------- */ 
 
-.teasers {
+.storyLabel {
     margin-top: 3em;
 }
-.teasers p {
+.storyLabel p {
     width:50%;
     font-family:'Strait',Helvetica,Arial,sans-serif !important;
     text-align: center;
@@ -252,7 +252,7 @@ text-align:center;
     padding: .5em 0;
     border-top:1px solid #c9c9c9; 
 }
-.teasers p:last-child {
+.storyLabel p:last-child {
     border-bottom: 1px solid #c9c9c9;
     margin-bottom: 1em;
 }
@@ -2491,7 +2491,8 @@ a.startVideo:hover {
 
                                             } 
 
-                                            #inset3 .my-simple-gallery a {
+                                            #inset3 .my-simple-gallery a,
+                                            .smaller-grid .my-simple-gallery a {
                                                 margin:1%;
                                                 width:10.5%;
 
@@ -2654,13 +2655,14 @@ Navigation trigger - visible on small devices only
   display: block;
   position: fixed;
   z-index: 2;
-  bottom: 9px;
+  bottom: 30px;
   right: 30px;
   height: 50px;
   width: 50px;
   border-radius: 0.25em;
   background: #2ba6cb;
   padding:0;
+  margin-bottom: 0;
   opacity: .8;
   /* reset button style */
   cursor: pointer;
@@ -3238,8 +3240,8 @@ div.title h1 {
       
     }
 }
-/* ++++++++++++++++++++++++++++++++++++ 800px +++++++++++++++++++++++++++++++++ */
-@media only screen and (max-width:800px) {
+/* ++++++++++++++++++++++++++++++++++++ 799px +++++++++++++++++++++++++++++++++ */
+@media only screen and (max-width:799px) {
     
     .centergallery .caption {
         font-size:.8em;
@@ -3268,10 +3270,10 @@ div.title h1 {
     .centergallery button.slick-prev {
         padding:0;
         width:8%;
-    }
+ /*   }
     .centervideo {
         margin:2em 0;
-    }
+    }*/
     section.inset p {
         line-height: 1.7;
     }
@@ -3346,7 +3348,8 @@ section.inset.hedlines h3.subheading {
     font-size:1.25em;
 }
 
-#inset3 .my-simple-gallery a {
+#inset3 .my-simple-gallery a,
+.smaller-grid .my-simple-gallery a {
     margin:1%;
     width:14.66%;
 }
@@ -3719,7 +3722,7 @@ p{
 }
 
 .cd-nav-trigger {
-  bottom: 0;
+  bottom: 10px;
   right: 10px;
   
 }

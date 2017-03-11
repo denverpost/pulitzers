@@ -283,14 +283,14 @@ a.pswp__share--download:hover {
   padding: 1.5em;
   line-height: 1.45;
   letter-spacing: .025em;
-  color: #CCC; 
+  color: #fff; 
 }
   
   .pswp__caption__center em {
   text-transform:uppercase;
   font-style: normal;
   font-size:75%;
-  color: #888; 
+  color: #d3d3d3; 
 }
 
 .pswp__caption--empty {
