@@ -206,12 +206,13 @@ p:last-child {
     margin-bottom: 3em;
 }
 
-/*
+
 p.lead {
-    font-size:1.25em;
+    font-size:1.35em;
     line-height:1.7;
     font-weight:700;
 }
+/*
 p.blurb {
     font-family:'PT Sans Narrow', Georgia, Times, 'Times New Roman', serif;
     font-size:1.3em;
@@ -471,7 +472,7 @@ section.inset.storyHeds h3 {
  }
 
 
-section.inset h4 {
+section.inset h4, h4 {
    font-family:'Lato', Helvetica, Arial, sans-serif !important;
   font-weight: 400;
    text-align:center;
@@ -481,7 +482,7 @@ section.inset h4 {
    color: #ba5847;
  }
 
-section.inset h4 span{
+section.inset h4 span, h4 span{
    display:block;
    font-weight: 900;
    text-transform: none;
@@ -3588,7 +3589,7 @@ section.inset.hedlines h3.subheading {
 }
 
 
-section.inset h4 {
+section.inset h4, h4 {
     margin: .9em 0 .75em;
  }
 
