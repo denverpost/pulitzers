@@ -3163,18 +3163,37 @@ no-js
 /* ++++++++++++++++++++++++++++++++++++ 1140px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:1140px) {
 div.title h1 {
-       font-size:4.5em;
+       font-size:4em;
+       margin-bottom: .85em;
     }
-
+.storyLabel p {
+        font-size: 1.55em;
+}
+.storyLabel {
+    margin-top: 2.5em;
+}
+div.title.more h2{
+    font-size: 2.8em;
+}
 }
 /* ++++++++++++++++++++++++++++++++++++ 1024px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:1024px) {
 
     
     div.title h1 {
-       font-size:3.5em;
-    }
+       font-size:3.25em;
+       margin-bottom: .8em;
 
+    }
+.storyLabel p {
+        font-size: 1.45em;
+}
+.storyLabel {
+    margin-top: 2.25em;
+}
+div.title.more h2{
+    font-size: 2.5em;
+}
     h2 {
         font-size: 2.5em;
     }
@@ -3252,7 +3271,21 @@ div.title h1 {
 /* ++++++++++++++++++++++++++++++++++++ 799px +++++++++++++++++++++++++++++++++ */
 @media only screen and (max-width:799px) {
     
-    .centergallery .caption {
+   div.title h1 {
+       font-size:3em;
+       margin-bottom: .65em;
+    }
+    .storyLabel p {
+        font-size: 1.35em;
+}
+.storyLabel {
+    margin-top: 2em;
+}
+div.title.more h2{
+    font-size: 2.25em;
+}
+
+  .centergallery .caption {
         font-size:.8em;
     }
     .centergallery button span {
@@ -3314,10 +3347,19 @@ p.byline {
     }
 
     div.title h1 {
-   font-size:2.75em;
-   margin-bottom: 0;
+   font-size:2.5em;
+   line-height: 1.10;
+   margin-bottom: .75em;
   }
-
+.storyLabel p {
+        font-size: 1.3em;
+}
+.storyLabel {
+    margin-top: 2.25em;
+}
+div.title.more h2{
+    font-size: 2em;
+}
 h2 {
     font-size: 2em;
   }
@@ -3334,9 +3376,7 @@ div.title.more {
     margin-top:1em;
 }
 
-div.title.more h2 {
-    font-size:2.65em;
- }
+
 
 
   .row-gallery h2{
@@ -3370,7 +3410,7 @@ section.inset.hedlines h3.subheading {
 @media only screen and (max-width:680px) {
    
 #prizes h1{
-  font-size:2.5em;
+  font-size:2em;
   margin:1em 5% .3em;
 
   margin:0 0 2%;
@@ -3412,7 +3452,7 @@ button, .button {
 @media only screen and (max-width:640px) {
     
     div.title h1 {
-        margin: 1.5em .15em 0;
+        margin: 1.5em .15em .25em;
     }
 
     button, .button {
@@ -3502,10 +3542,17 @@ button, .button {
         font-size:3em;
     }
     div.title h1 {
-        font-size:2.25em;
+        font-size:2em;
+        line-height: 1.15;
     }
-
-
+    .storyLabel p {
+        font-size: 1.25em;
+}.storyLabel {
+    margin-top: 1.5em;
+}
+div.title.more h2{
+    font-size: 1.8em;
+}
     .teasers p{
          font-size: 1.25em;
 
@@ -3515,9 +3562,7 @@ button, .button {
         margin-top:1em;
     }
 
-    div.title.more h2 {
-        font-size:1.95em;
-     }
+   
 
 
 
@@ -3665,9 +3710,16 @@ section.inset h4, h4 {
         font-size:2.75em;
     }
     div.title h1 {
-        font-size:2em;
-        margin: 1em .15em 0;
+        font-size:1.7em;
+        margin: 1em .15em .3em;
+        line-height: 1.2;
     }
+    .storyLabel p {
+        font-size: 1.15em;
+}
+.storyLabel {
+    margin-top: 2em;
+}
     .opener div#title h2 {
         font-size:2.45em;
         line-height:.25;
@@ -3727,7 +3779,8 @@ p.byline {
      font-size:.9em;
 }
 p{
-    line-height: 1.5;
+    line-height: 1.35;
+    margin-bottom: .85em;
 }
 
 .cd-nav-trigger {
@@ -3751,6 +3804,9 @@ right:10px;
     padding-left: 0;
     padding-right: 0;
 }
+div.title.more h2{
+    font-size: 1.55em;
+}
 }
 /* ++++++++++++++++++++++++++++++++++++ 400px +++++++++++++++++++++++++++++++++ */
 
@@ -3760,7 +3816,8 @@ section.inset.right {
     width: 74%;
 }
  div.title h1 {
-       margin: 1em .25em 0;
+    font-size: 1.55em;
+  /*     margin: 1em .25em 0;*/
     }
 
 }
@@ -3778,6 +3835,6 @@ section.inset.right {
     margin: -4em 0em 1em 0;
 }
  div.title h1 {
-      margin-bottom: -.5em;
+      margin-bottom: 0em;
     }
 }
