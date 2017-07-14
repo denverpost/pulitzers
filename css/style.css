@@ -404,7 +404,7 @@ section.inset.left a.expandme:after {
 
 /* --------------------- Expanding/Collapsing Sidebars --------------------- */
 
-section.inset.hedlines a.hideme, section.inset a.hideme, section.inset a.expandme {
+section.inset.hedlines a.hideme, section.inset a.hideme, section.inset a.expandme, section.inset a {
     display:inline-block; 
     font-family:'Strait', Helvetica, Arial, sans-serif !important;
     font-weight: 300;
@@ -426,6 +426,13 @@ section.inset.right a.expandme {
     text-align:right;
     float:right;
 }
+section.inset a {
+    text-align: center;
+}
+section.inset p.tighter {
+    margin-bottom: 0em;
+}
+
 section.inset.right a.expandme:before {
     content: "\25C0";
     display:inline-block;
